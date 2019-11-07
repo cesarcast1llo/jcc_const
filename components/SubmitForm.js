@@ -45,8 +45,8 @@ class SubmitForm extends Component {
           fieldValidationErrors.Number = numberValid ? '': 'is invalid';
           break;
         case 'message':
-          messageValid = value.match(/^[a-zA-Z0-9_ !@#\$%\^\&*\)\(+=._-]{15}/);
-          fieldValidationErrors.Message = messageValid ? '': 'at least 10 characters';
+          messageValid = value.match(/^([a-zA-Z0-9_!@#\$%\^\&*\)\(+=._-]+)([a-zA-Z0-9_ !@#\$%\^\&*\)\(+=._-]){15}/);
+          fieldValidationErrors.Message = messageValid ? '': 'at least 15 characters';
           break;
         default:
           break;

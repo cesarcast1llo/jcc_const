@@ -18,7 +18,6 @@ class Contact extends Component {
         />
       <SubmitForm />
       <Footer />
-      <a href="https://www.npmjs.com/package/nodemailer-mailgun-transport" target="_about">Mailgun</a>
     </div>
     );
   }
