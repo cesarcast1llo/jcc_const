@@ -1,0 +1,26 @@
+/* style guide */
+$font-stack: 'Arial', sans-serif;
+$font-size-base: 12px;
+
+// screen sizes
+$L: 1200px;
+$M: 992px;
+$S: 768px;
+$mobile: 480px;
+
+// desktop gutter
+$l-gutter: 52px;
+
+//mobile gutter
+$S-gutter: 20px;
+
+$max-w:1920px;
+$inner-max-w: 900px;
+$v-space: 50px;
+
+// Colors
+$red: #f93820;
+// this is different in design
+$black: #1e1a34;
+$grey: #e9e9e9;
+$green-gradient: linear-gradient(to bottom, #009443, #00bd58);

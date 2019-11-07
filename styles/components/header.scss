@@ -1,0 +1,35 @@
+.header {
+   background-color: gray;
+   z-index: 100;
+
+   .navbar {
+      padding: 10px 20px;
+
+      img.logo {
+         width: 50px;
+         height: auto;
+         margin-left: 25px;
+         z-index: 999;
+      }
+
+      .navbar-toggler {
+         border: 0;
+         outline: none;
+      }
+
+      .linkstyle {
+         font-size: 1.2rem;
+         margin: 0 20px 0 0;
+         position: relative;
+         text-align: center;
+         
+         a {
+            color: inherit;
+            text-decoration: none;
+         }
+      }
+      .linkstyle:last-child {
+         margin-right: 25px;
+      }
+   }
+}

@@ -1,0 +1,55 @@
+.card {
+   margin: 30px 0;
+}
+
+.modal {
+
+   .modal-dialog {
+      margin: 0 auto;
+      width: 95%;
+      @media(min-width: $mobile) {
+         max-width: 768px;
+      }
+      @media(min-width: $S) {
+         max-width: 992px;
+      }
+      @media(min-width: $M) {
+         max-width: 1199px;
+      }
+
+      .modal-content {
+         margin: 0 auto;
+
+         .modal-header {
+            border: 0;
+            padding: .5rem 1rem;
+            
+            .modal-title {
+               font-size: 25px;
+            }
+            
+            button.close:focus, button.close:active {
+               padding: 10px;
+               outline: none !important;
+               box-shadow: none !important;
+            }
+         }
+
+         .modal-body {
+            padding: 0 1rem 1rem;
+
+
+         }
+
+         .modal-footer{
+            justify-content: center;
+
+            .btn {
+               padding: 5px 15px;
+               font-size: 20px;
+            }
+         }
+      }
+
+   }
+}

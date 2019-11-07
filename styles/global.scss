@@ -1,0 +1,56 @@
+HTML,
+BODY {
+  overflow-x: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0 auto;
+  padding: 0;
+  max-width: $max-w;
+  position: relative;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// display: none @ 480px
+.em_hide480 {
+  @media(max-width: $mobile) {
+    display: none !important;
+  }
+}
+
+// .modal {
+//   // width: 80%;
+//   // height: 50%;
+//   position: fixed;
+//   // top: calc(50% - 30%);
+//   // left: calc(50% - 40%);
+//   @media(min-width: $S) {
+//     // width: 50%;
+//     // height: 50%;
+//     position: fixed;
+//     // top: calc(50% - 30%);
+//     // left: calc(50% - 25%);
+//   }
+
+//   .modal-content {
+//     background-color: red;
+//     text-align: center;
+
+//     .modal-footer {
+//       display: none !important;
+//     }
+
+//     .modal-body {
+//       font-size: 1.2rem;
+//       padding: 3rem !important;
+
+//       p {
+//         margin: 0;
+//       }
+//     }
+//  }
+// }
