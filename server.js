@@ -7,8 +7,12 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const server = express();
 const handle = app.getRequestHandler();
-var $PORT = process.env.PORT || 4000;
 require('dotenv').config();
+
+var $PORT = process.env.PORT || 4000;
+var FROM = "JCC Contact Request <donotreply@jcc.com>";
+var SUBJECT = "Contact Message Received";
+
 
 var auth = {
    auth: {
@@ -19,7 +23,7 @@ var auth = {
 var nodemailerMailgun = nodemailer.createTransport(mg(auth));
 
 server.use(bodyParser.urlencoded({ extended: false }));
-server.use(bodyParser.json())
+server.use(bodyParser.json());
 
 server.post('/sent', (req, res) => {
    const output = `
@@ -35,9 +39,9 @@ server.post('/sent', (req, res) => {
    `;
 
    nodemailerMailgun.sendMail({
-      from: '<donotreply@jccwebsite.com>',
+      from: FROM,
       to: process.env.EMAILS,
-      subject: 'Contact Submission',
+      subject: SUBJECT,
       text: output
 
     }, function (err, info) {

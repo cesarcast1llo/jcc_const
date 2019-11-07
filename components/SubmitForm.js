@@ -12,10 +12,12 @@ class SubmitForm extends Component {
         alert: null,
         email: '',
         number: '',
-        formErrors: {email: '', number: ''},
-        message: 'Email and Phone Number Required',
+        message: '',
+        formErrors: {email: '', number: '', message: ''},
+        warning: 'Email, Phone Number, and Message Required',
         emailValid: false,
         numberValid: false,
+        messageValid: false,
         formValid: false,
       };
     }
@@ -31,6 +33,7 @@ class SubmitForm extends Component {
       let fieldValidationErrors = this.state.formErrors;
       let emailValid = this.state.emailValid;
       let numberValid = this.state.numberValid;
+      let messageValid = this.state.messageValid;
   
       switch(fieldName) {
         case 'email':
@@ -41,6 +44,10 @@ class SubmitForm extends Component {
           numberValid = value.match(/^\d{3}-?\d{3}-?\d{4}$/);
           fieldValidationErrors.Number = numberValid ? '': 'is invalid';
           break;
+        case 'message':
+          messageValid = value.match(/^[a-zA-Z0-9_ !@#\$%\^\&*\)\(+=._-]{15}/);
+          fieldValidationErrors.Message = messageValid ? '': 'at least 10 characters';
+          break;
         default:
           break;
       }
@@ -48,11 +55,12 @@ class SubmitForm extends Component {
          formErrors: fieldValidationErrors,
          emailValid: emailValid,
          numberValid: numberValid,
+         messageValid: messageValid,
       }, this.validateForm);
     }
   
     validateForm() {
-      this.setState({formValid: this.state.emailValid && this.state.numberValid});
+      this.setState({formValid: this.state.emailValid && this.state.numberValid && this.state.messageValid});
     }
   
     errorClass(error) {
@@ -93,7 +101,7 @@ class SubmitForm extends Component {
          </div>
         <Form className="form" method="POST" action="sent">
           <div className="states">
-              {this.state.message}
+              {this.state.warning}
               <FormErrors formErrors={this.state.formErrors} />
           </div>
           <FormGroup className="form-group">
@@ -108,7 +116,7 @@ class SubmitForm extends Component {
                   type="email" required 
                   name="email" 
                   id="email" 
-                  placeholder="example@example.com"
+                  placeholder="youremail@here.com"
                   value={this.state.email}
                   onChange={this.handleUserInput} />
               </FormGroup>
@@ -130,7 +138,13 @@ class SubmitForm extends Component {
             <div className="col-12 last-row">
               <FormGroup className="form-group">
                 <Label for="exampleSelectMulti">How can we help you?</Label>
-                <Input type="textarea" name="message" id="message" rows="3"/>
+                <Input 
+                type="textarea" 
+                name="message" 
+                id="message" 
+                rows="3"
+                value={this.state.message}
+                onChange={this.handleUserInput} />
               </FormGroup>
             </div>
           </div>
