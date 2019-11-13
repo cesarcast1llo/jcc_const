@@ -13,7 +13,6 @@ var $PORT = process.env.PORT || 4000;
 var FROM = "JCC Contact Request <donotreply@jcc.com>";
 var SUBJECT = "Contact Message Received";
 
-
 var auth = {
    auth: {
      api_key: process.env.MAILGUN_API_KEY,

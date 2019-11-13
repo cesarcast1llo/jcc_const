@@ -15,8 +15,8 @@ Production
 
 `heroku git:remote -a jcc-const` set up heroku
 
-`git push heroku master` deploy to heroku - https://jccwebsite.herokuapp.com/
+`git push heroku master` deploy to heroku - https://jcc-const.herokuapp.com/
 
 `now` deploy to https://nextjs-practice.cesarcast1llo.now.sh ZEIT
 
-URL - https://jcc-const.herokuapp.com/contact
+URL - https://jcc-const.herokuapp.com/
