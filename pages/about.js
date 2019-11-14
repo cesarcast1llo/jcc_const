@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import HeadMeta from '../components/HeadMeta';
 import Footer from '../components/Footer';
 import "../styles/websitename.scss";
+
 export default function About() {
   return (
     <div>

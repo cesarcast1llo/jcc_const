@@ -161,4 +161,3 @@ class SubmitForm extends Component {
 }
 
 export default SubmitForm;
-

@@ -5,8 +5,6 @@ import Marquee from '../components/Marquee';
 
 import "../styles/websitename.scss";
 
-
-
 export default function Index() {
   return (
     <div>
