@@ -20,7 +20,6 @@ var auth = {
    }
  }
 var nodemailerMailgun = nodemailer.createTransport(mg(auth));
-
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
 

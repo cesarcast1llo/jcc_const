@@ -67,7 +67,7 @@ class SubmitForm extends Component {
       return(error.length === 0 ? '' : 'has-error');
     }
 
-   //  email sendoff functions
+   //  email sent functions
     submitEmail() {
       const activatePopup = () => (
         <SweetAlert
