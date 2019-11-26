@@ -150,7 +150,7 @@ class SubmitForm extends Component {
           </div>
           <div className="row">
             <div className="col-12 button-row animated slideInLeft delay-2s">
-            <Button className="submitbtn" type="submit" value="submit" disabled={!this.state.formValid} onClick={() => this.submitEmail()}>Submit</Button>
+              <Button className="submitbtn" type="submit" value="submit" disabled={!this.state.formValid} onClick={() => this.submitEmail()}>Submit</Button>
             </div>
           </div>
         </Form>
