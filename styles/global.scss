@@ -22,35 +22,9 @@ BODY {
   }
 }
 
-// .modal {
-//   // width: 80%;
-//   // height: 50%;
-//   position: fixed;
-//   // top: calc(50% - 30%);
-//   // left: calc(50% - 40%);
-//   @media(min-width: $S) {
-//     // width: 50%;
-//     // height: 50%;
-//     position: fixed;
-//     // top: calc(50% - 30%);
-//     // left: calc(50% - 25%);
-//   }
-
-//   .modal-content {
-//     background-color: red;
-//     text-align: center;
-
-//     .modal-footer {
-//       display: none !important;
-//     }
-
-//     .modal-body {
-//       font-size: 1.2rem;
-//       padding: 3rem !important;
-
-//       p {
-//         margin: 0;
-//       }
-//     }
-//  }
-// }
+.em_hide {
+  display: none !important;
+  @media(min-width: $S) {
+    display: block !important;
+  }
+}
