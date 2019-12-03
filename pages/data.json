@@ -1,0 +1,41 @@
+{
+   "portfolio": {
+      "alt": [
+         "construction alt text needed here"
+      ],
+      "jobs": [{
+         "index": [
+            "/static/img/test.jpg"
+         ],
+         "carousel": [{
+            "img": [
+               "/static/img/video-poster.jpg"
+            ]
+         }, {
+            "img": [
+               "/static/img/uncharted.jpg"
+            ]
+         }, {
+            "img": [
+               "/static/img/placeholder.png"
+            ]
+         }, {
+            "img": [
+               "/static/img/test.jpg"
+            ]
+         }, {
+            "img": [
+               "/static/img/uncharted.jpg"
+            ]
+         }]
+      },
+      {
+         "index": [
+            "/static/img/placeholder.png"
+         ],
+         "carousel": [
+            "/static/img/uncharted.jpg"
+         ]
+      }]
+   }
+}

@@ -3,7 +3,7 @@ import "../styles/websitename.scss";
 
 const Marquee = () => (
   <div className="marquee">
-    <Carousel className="carousel" interval="5000" pauseonhover="true" >
+    {/* <Carousel className="carousel" interval="5000" pauseonhover="true" >
       <Carousel.Item pauseonhover="true">
         <img
           className="d-block w-100"
@@ -25,7 +25,7 @@ const Marquee = () => (
           alt="Third slide"
         />
       </Carousel.Item>
-    </Carousel>
+    </Carousel> */}
   </div>
 );
 

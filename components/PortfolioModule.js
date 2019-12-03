@@ -5,9 +5,9 @@ export default function PortfolioImages (props) {
 	return(
 		<div>
 			<div className="card">
-				<img className="card-img-top" src={props.img} alt={props.imgsAlt} />
+				<img className="card-img-top" src={props.imgs} alt={props.imgsAlt} />
 				<div className="card-body">
-				<p className="card-text">{props.textInside}</p>
+					<p className="card-text">{props.textInside}</p>
 				</div>
 				<button type="button" className="btn btn-primary" data-toggle="modal" data-target={props.modalID}>
 					{props.buttonText}
@@ -17,9 +17,6 @@ export default function PortfolioImages (props) {
 				<div className="modal-dialog modal-dialog-centered" role="document">
 					<div className="modal-content">
 						<div className="modal-header">
-							<h5 className="modal-title" id="exampleModalLongTitle">
-								{props.PopupTitle}
-							</h5>
 							<button type="button" className="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
@@ -29,40 +26,49 @@ export default function PortfolioImages (props) {
 								<Carousel.Item>
 									<img
 										className="d-block w-100"
-										src={props.img1}
-										alt={props.alt1}
+										src={props.carousel1}
+										alt={props.imgsAlt}
 									/>
 								</Carousel.Item>
 								<Carousel.Item>
 									<img
 										className="d-block w-100"
-										src={props.img2}
-										alt={props.alt2}
+										src={props.carousel2}
+										alt={props.imgsAlt}
 									/>
 								</Carousel.Item>
 								<Carousel.Item>
 									<img
 										className="d-block w-100"
-										src={props.img3}
-										alt={props.alt3}
+										src={props.carousel3}
+										alt={props.imgsAlt}
 									/>
 								</Carousel.Item>
 								<Carousel.Item>
 									<img
 										className="d-block w-100"
-										src={props.img4}
-										alt={props.alt4}
+										src={props.carousel4}
+										alt={props.imgsAlt}
 									/>
 								</Carousel.Item>
 								<Carousel.Item>
 									<img
 										className="d-block w-100"
-										src={props.img5}
-										alt={props.alt5}
+										src={props.carousel5}
+										alt={props.imgsAlt}
 									/>
 								</Carousel.Item>
 							</Carousel>
-							{props.PopupDescription}
+							<div className="container">
+								<div className="row">
+									<div className="col-12 gallery-description">
+										<h3 className="modal-title" id="exampleModalLongTitle">
+											{props.PopupTitle}
+										</h3>
+										{props.PopupDescription}
+									</div>
+								</div>
+							</div>
 						</div>
 						<div className="modal-footer">
 							<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
