@@ -5,9 +5,9 @@ export default function PortfolioImages (props) {
 	return(
 		<div>
 			<div className="card">
-				<img className="card-img-top" src={props.imgs} alt={props.imgsAlt} />
+				<img className="card-img-top" src={props.mainImg} alt={props.imgsAlt} />
 				<div className="card-body">
-					<p className="card-text">{props.textInside}</p>
+					<p className="card-text" dangerouslySetInnerHTML={{__html: props.jobDescription}} />
 				</div>
 				<button type="button" className="btn btn-primary" data-toggle="modal" data-target={props.modalID}>
 					{props.buttonText}
@@ -26,35 +26,35 @@ export default function PortfolioImages (props) {
 								<Carousel.Item>
 									<img
 										className="d-block w-100"
-										src={props.carousel1}
+										src={props.firstImg}
 										alt={props.imgsAlt}
 									/>
 								</Carousel.Item>
 								<Carousel.Item>
 									<img
 										className="d-block w-100"
-										src={props.carousel2}
+										src={props.secondImg}
 										alt={props.imgsAlt}
 									/>
 								</Carousel.Item>
 								<Carousel.Item>
 									<img
 										className="d-block w-100"
-										src={props.carousel3}
+										src={props.thirdImg}
 										alt={props.imgsAlt}
 									/>
 								</Carousel.Item>
 								<Carousel.Item>
 									<img
 										className="d-block w-100"
-										src={props.carousel4}
+										src={props.fourthImg}
 										alt={props.imgsAlt}
 									/>
 								</Carousel.Item>
 								<Carousel.Item>
 									<img
 										className="d-block w-100"
-										src={props.carousel5}
+										src={props.fifthImg}
 										alt={props.imgsAlt}
 									/>
 								</Carousel.Item>
@@ -62,10 +62,8 @@ export default function PortfolioImages (props) {
 							<div className="container">
 								<div className="row">
 									<div className="col-12 gallery-description">
-										<h3 className="modal-title" id="exampleModalLongTitle">
-											{props.PopupTitle}
-										</h3>
-										{props.PopupDescription}
+										<h3 className="modal-title" id="exampleModalLongTitle" dangerouslySetInnerHTML={{__html: props.jobTitle}}/>
+										<p className="job-img-description" dangerouslySetInnerHTML={{__html: props.jobSubTitle}} />
 									</div>
 								</div>
 							</div>

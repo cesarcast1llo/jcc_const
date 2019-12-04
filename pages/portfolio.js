@@ -25,26 +25,26 @@ export default function Porftolio() {
         <div className="row">
           <div className="col-lg-6">
             <PortfolioModule
-              imgs={Data.portfolio.jobs[0].index}
+              mainImg={Data.portfolio.jobs[0].mainImg}
               imgsAlt={Data.portfolio.alt}
-              textInside="Started 01/01/2019 - Completed 04/01/2019"
+              jobDescription={Data.portfolio.jobs[0].jobDescription}
               modalID="#one"
               buttonText="First Gallery"
               PopupID="one"
-              PopupTitle="Popup title prob going to delete"
-              PopupDescription="This was a renovated pool house with minimal stability foundation that was turned into a modern pool house with pillar stability and bathroom functionality"
-              carousel1={Data.portfolio.jobs[0].carousel[0].img} imgsAlt={Data.portfolio.alt}
-              carousel2={Data.portfolio.jobs[0].carousel[1].img} imgsAlt={Data.portfolio.alt}
-              carousel3={Data.portfolio.jobs[0].carousel[2].img} imgsAlt={Data.portfolio.alt}
-              carousel4={Data.portfolio.jobs[0].carousel[3].img} imgsAlt={Data.portfolio.alt}
-              carousel5={Data.portfolio.jobs[0].carousel[4].img} imgsAlt={Data.portfolio.alt}
+              jobTitle={Data.portfolio.jobs[0].jobTitle}
+              jobSubTitle={Data.portfolio.jobs[0].jobSubTitle}
+              firstImg={Data.portfolio.jobs[0].firstImg} imgsAlt={Data.portfolio.alt}
+              secondImg={Data.portfolio.jobs[0].secondImg} imgsAlt={Data.portfolio.alt}
+              thirdImg={Data.portfolio.jobs[0].thirdImg} imgsAlt={Data.portfolio.alt}
+              fourthImg={Data.portfolio.jobs[0].fourthImg} imgsAlt={Data.portfolio.alt}
+              fifthImg={Data.portfolio.jobs[0].fourthImg} imgsAlt={Data.portfolio.alt}
             />
           </div>
           <div className="col-lg-6">
             <PortfolioModule
-              imgs={Data.portfolio.jobs[1].index}
+              mainImg={Data.portfolio.jobs[1].mainImg}
               imgsAlt={Data.portfolio.alt}
-              textInside="Started 01/01/2019 - Completed 04/01/2019"
+              jobDescription={Data.portfolio.jobs[1].jobDescription}
               modalID="#two"
               buttonText="Second Gallery"
               PopupID="two"
@@ -59,11 +59,11 @@ export default function Porftolio() {
           </div>
           <div className="col-lg-6">
             <PortfolioModule
-              img="../static/img/video-poster.jpg"
-              textInside="Started 01/01/2019 - Completed 04/01/2019"
-              modalID="#two"
+              mainImg="../static/img/video-poster.jpg"
+              jobDescription="Started 01/01/2019 - Completed 04/01/2019"
+              modalID="#three"
               buttonText="Second Gallery"
-              PopupID="two"
+              PopupID="three"
               PopupTitle="Popup title, might delete"
               PopupDescription="This was a renovated pool house with minimal stability foundation that was turned into a modern pool house with pillar stability and bathroom functionality"
               img1="../static/img/placeholder.png" alt1="alt"
@@ -75,11 +75,11 @@ export default function Porftolio() {
           </div>
           <div className="col-lg-6">
             <PortfolioModule
-              img="../static/img/placeholder.png"
-              textInside="Started 01/01/2019 - Completed 04/01/2019"
-              modalID="#one"
+              mainImg="../static/img/placeholder.png"
+              jobDescription="Started 01/01/2019 - Completed 04/01/2019"
+              modalID="#four"
               buttonText="First Gallery"
-              PopupID="one"
+              PopupID="four"
               PopupTitle="Popup title prob going to delete"
               PopupDescription="This was a renovated pool house with minimal stability foundation that was turned into a modern pool house with pillar stability and bathroom functionality"
               img1="../static/img/placeholder.png" alt1="alt"
@@ -91,11 +91,11 @@ export default function Porftolio() {
           </div>
           <div className="col-lg-6">
             <PortfolioModule
-              img="../static/img/placeholder.png"
-              textInside="Started 01/01/2019 - Completed 04/01/2019"
-              modalID="#one"
+              mainImg="../static/img/placeholder.png"
+              jobDescription="Started 01/01/2019 - Completed 04/01/2019"
+              modalID="#five"
               buttonText="First Gallery"
-              PopupID="one"
+              PopupID="five"
               PopupTitle="Popup title prob going to delete"
               PopupDescription="This was a renovated pool house with minimal stability foundation that was turned into a modern pool house with pillar stability and bathroom functionality"
               img1="../static/img/placeholder.png" alt1="alt"
@@ -107,11 +107,11 @@ export default function Porftolio() {
           </div>
           <div className="col-lg-6">
             <PortfolioModule
-              img="../static/img/placeholder.png"
-              textInside="Started 01/01/2019 - Completed 04/01/2019"
-              modalID="#one"
+              mainImg="../static/img/placeholder.png"
+              jobDescription="Started 01/01/2019 - Completed 04/01/2019"
+              modalID="#six"
               buttonText="First Gallery"
-              PopupID="one"
+              PopupID="six"
               PopupTitle="Popup title prob going to delete"
               PopupDescription="This was a renovated pool house with minimal stability foundation that was turned into a modern pool house with pillar stability and bathroom functionality"
               img1="../static/img/placeholder.png" alt1="alt"
