@@ -1,17 +1,15 @@
 import Carousel from 'react-bootstrap/Carousel';
 
-export default function PortfolioImages (props) {
+const PortfolioImages = (props) => {
 
 	return(
 		<div>
-			<div className="card">
+			<div className="card" data-toggle="modal" data-target={props.modalID}>
 				<img className="card-img-top" src={props.mainImg} alt={props.imgsAlt} />
 				<div className="card-body">
 					<p className="card-text" dangerouslySetInnerHTML={{__html: props.jobDescription}} />
 				</div>
-				<button type="button" className="btn btn-primary" data-toggle="modal" data-target={props.modalID}>
-					{props.buttonText}
-				</button>
+				<button type="button" className="btn btn-primary" data-toggle="modal" data-target={props.modalID}  dangerouslySetInnerHTML={{__html: props.buttonName}} />
 			</div>
 			<div className="modal fade modal" id={props.PopupID} tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 				<div className="modal-dialog modal-dialog-centered" role="document">
@@ -77,3 +75,5 @@ export default function PortfolioImages (props) {
 		</div>
 	)
 }
+
+export default PortfolioImages

@@ -7,7 +7,7 @@ import "../styles/websitename.scss";
 
 export default function Index() {
   return (
-    <div>
+    <div className="home-page">
       <HeadMeta
         title="Welcome"
         description="JCC Construction"

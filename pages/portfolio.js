@@ -8,28 +8,28 @@ import "../styles/websitename.scss";
 
 export default function Porftolio() {
   return (
-    <div>
+    <div className="porfolio-page">
       <Header/>
       <HeadMeta
-        title="Porftolio"
+        title="Porftolio Page"
         description="add description of page for SEO"
         keywords="keywords for google stuff"
         />
 
       <div className="container">
         <div className="row">
-          <div className="col-lg-12">
+          <div className="col-lg-12 portfolio-header">
             <h1>Latest Jobs Completed</h1>
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-6">
+          <div className="col-lg-6 portfolio-modules">
             <PortfolioModule
               mainImg={Data.portfolio.jobs[0].mainImg}
               imgsAlt={Data.portfolio.alt}
               jobDescription={Data.portfolio.jobs[0].jobDescription}
               modalID="#one"
-              buttonText="First Gallery"
+              buttonName={Data.portfolio.jobs[0].buttonName}
               PopupID="one"
               jobTitle={Data.portfolio.jobs[0].jobTitle}
               jobSubTitle={Data.portfolio.jobs[0].jobSubTitle}
@@ -40,85 +40,89 @@ export default function Porftolio() {
               fifthImg={Data.portfolio.jobs[0].fourthImg} imgsAlt={Data.portfolio.alt}
             />
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6 portfolio-modules">
             <PortfolioModule
               mainImg={Data.portfolio.jobs[1].mainImg}
               imgsAlt={Data.portfolio.alt}
               jobDescription={Data.portfolio.jobs[1].jobDescription}
               modalID="#two"
-              buttonText="Second Gallery"
+              buttonName={Data.portfolio.jobs[1].buttonName}
               PopupID="two"
-              PopupTitle="Popup title, might delete"
-              PopupDescription="This was a renovated pool house with minimal stability foundation that was turned into a modern pool house with pillar stability and bathroom functionality"
-              img1={Data.portfolio.jobs[1].carousel} imgsAlt={Data.portfolio.alt}
-              img2={Data.portfolio.jobs[1].carousel} imgsAlt={Data.portfolio.alt}
-              img3={Data.portfolio.jobs[1].carousel} imgsAlt={Data.portfolio.alt}
-              img4={Data.portfolio.jobs[1].carousel} imgsAlt={Data.portfolio.alt}
-              img5={Data.portfolio.jobs[1].carousel} imgsAlt={Data.portfolio.alt}
+              jobTitle={Data.portfolio.jobs[1].jobTitle}
+              jobSubTitle={Data.portfolio.jobs[1].jobSubTitle}
+              firstImg={Data.portfolio.jobs[1].firstImg} imgsAlt={Data.portfolio.alt}
+              secondImg={Data.portfolio.jobs[1].secondImg} imgsAlt={Data.portfolio.alt}
+              thirdImg={Data.portfolio.jobs[1].thirdImg} imgsAlt={Data.portfolio.alt}
+              fourthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
+              fifthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
             />
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6 portfolio-modules">
             <PortfolioModule
-              mainImg="../static/img/video-poster.jpg"
-              jobDescription="Started 01/01/2019 - Completed 04/01/2019"
-              modalID="#three"
-              buttonText="Second Gallery"
-              PopupID="three"
-              PopupTitle="Popup title, might delete"
-              PopupDescription="This was a renovated pool house with minimal stability foundation that was turned into a modern pool house with pillar stability and bathroom functionality"
-              img1="../static/img/placeholder.png" alt1="alt"
-              img2="../static/img/test.jpg" alt2="alt"
-              img3="../static/img/uncharted.jpg" alt3="alt"
-              img4="../static/img/uncharted.jpg" alt4="alt"
-              img5="../static/img/uncharted.jpg" alt5="alt"
+              mainImg={Data.portfolio.jobs[1].mainImg}
+              imgsAlt={Data.portfolio.alt}
+              jobDescription={Data.portfolio.jobs[1].jobDescription}
+              modalID="#two"
+              buttonName={Data.portfolio.jobs[1].buttonName}
+              PopupID="two"
+              jobTitle={Data.portfolio.jobs[1].jobTitle}
+              jobSubTitle={Data.portfolio.jobs[1].jobSubTitle}
+              firstImg={Data.portfolio.jobs[1].firstImg} imgsAlt={Data.portfolio.alt}
+              secondImg={Data.portfolio.jobs[1].secondImg} imgsAlt={Data.portfolio.alt}
+              thirdImg={Data.portfolio.jobs[1].thirdImg} imgsAlt={Data.portfolio.alt}
+              fourthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
+              fifthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
             />
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6 portfolio-modules">
             <PortfolioModule
-              mainImg="../static/img/placeholder.png"
-              jobDescription="Started 01/01/2019 - Completed 04/01/2019"
-              modalID="#four"
-              buttonText="First Gallery"
-              PopupID="four"
-              PopupTitle="Popup title prob going to delete"
-              PopupDescription="This was a renovated pool house with minimal stability foundation that was turned into a modern pool house with pillar stability and bathroom functionality"
-              img1="../static/img/placeholder.png" alt1="alt"
-              img2="../static/img/test.jpg" alt2="alt"
-              img3="../static/img/uncharted.jpg" alt3="alt"
-              img4="../static/img/uncharted.jpg" alt4="alt"
-              img5="../static/img/uncharted.jpg" alt5="alt"
+              mainImg={Data.portfolio.jobs[1].mainImg}
+              imgsAlt={Data.portfolio.alt}
+              jobDescription={Data.portfolio.jobs[1].jobDescription}
+              modalID="#two"
+              buttonName={Data.portfolio.jobs[0].buttonName}
+              PopupID="two"
+              jobTitle={Data.portfolio.jobs[1].jobTitle}
+              jobSubTitle={Data.portfolio.jobs[1].jobSubTitle}
+              firstImg={Data.portfolio.jobs[1].firstImg} imgsAlt={Data.portfolio.alt}
+              secondImg={Data.portfolio.jobs[1].secondImg} imgsAlt={Data.portfolio.alt}
+              thirdImg={Data.portfolio.jobs[1].thirdImg} imgsAlt={Data.portfolio.alt}
+              fourthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
+              fifthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
             />
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6 portfolio-modules">
             <PortfolioModule
-              mainImg="../static/img/placeholder.png"
-              jobDescription="Started 01/01/2019 - Completed 04/01/2019"
-              modalID="#five"
-              buttonText="First Gallery"
-              PopupID="five"
-              PopupTitle="Popup title prob going to delete"
-              PopupDescription="This was a renovated pool house with minimal stability foundation that was turned into a modern pool house with pillar stability and bathroom functionality"
-              img1="../static/img/placeholder.png" alt1="alt"
-              img2="../static/img/test.jpg" alt2="alt"
-              img3="../static/img/uncharted.jpg" alt3="alt"
-              img4="../static/img/uncharted.jpg" alt4="alt"
-              img5="../static/img/uncharted.jpg" alt5="alt"
+              mainImg={Data.portfolio.jobs[1].mainImg}
+              imgsAlt={Data.portfolio.alt}
+              jobDescription={Data.portfolio.jobs[1].jobDescription}
+              modalID="#two"
+              buttonName={Data.portfolio.jobs[0].buttonName}
+              PopupID="two"
+              jobTitle={Data.portfolio.jobs[1].jobTitle}
+              jobSubTitle={Data.portfolio.jobs[1].jobSubTitle}
+              firstImg={Data.portfolio.jobs[1].firstImg} imgsAlt={Data.portfolio.alt}
+              secondImg={Data.portfolio.jobs[1].secondImg} imgsAlt={Data.portfolio.alt}
+              thirdImg={Data.portfolio.jobs[1].thirdImg} imgsAlt={Data.portfolio.alt}
+              fourthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
+              fifthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
             />
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6 portfolio-modules">
             <PortfolioModule
-              mainImg="../static/img/placeholder.png"
-              jobDescription="Started 01/01/2019 - Completed 04/01/2019"
-              modalID="#six"
-              buttonText="First Gallery"
-              PopupID="six"
-              PopupTitle="Popup title prob going to delete"
-              PopupDescription="This was a renovated pool house with minimal stability foundation that was turned into a modern pool house with pillar stability and bathroom functionality"
-              img1="../static/img/placeholder.png" alt1="alt"
-              img2="../static/img/test.jpg" alt2="alt"
-              img3="../static/img/uncharted.jpg" alt3="alt"
-              img4="../static/img/uncharted.jpg" alt4="alt"
-              img5="../static/img/uncharted.jpg" alt5="alt"
+              mainImg={Data.portfolio.jobs[1].mainImg}
+              imgsAlt={Data.portfolio.alt}
+              jobDescription={Data.portfolio.jobs[1].jobDescription}
+              modalID="#two"
+              buttonName={Data.portfolio.jobs[0].buttonName}
+              PopupID="two"
+              jobTitle={Data.portfolio.jobs[1].jobTitle}
+              jobSubTitle={Data.portfolio.jobs[1].jobSubTitle}
+              firstImg={Data.portfolio.jobs[1].firstImg} imgsAlt={Data.portfolio.alt}
+              secondImg={Data.portfolio.jobs[1].secondImg} imgsAlt={Data.portfolio.alt}
+              thirdImg={Data.portfolio.jobs[1].thirdImg} imgsAlt={Data.portfolio.alt}
+              fourthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
+              fifthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
             />
           </div>
         </div>

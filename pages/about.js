@@ -6,10 +6,10 @@ import "../styles/websitename.scss";
 
 export default function About() {
   return (
-    <div>
+    <div className="about-page">
       <Header/>
       <HeadMeta
-        title="About"
+        title="About Page"
         description=" "
         keywords="keywords for google stuff"
         />
