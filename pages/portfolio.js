@@ -24,7 +24,8 @@ export default function Porftolio() {
         </div>
         <div className="row">
           <div className="col-lg-6 portfolio-modules">
-            <PortfolioModule
+            <Porftolio data={Data.portfolio.jobs[0]} />
+            {/* <PortfolioModule
               mainImg={Data.portfolio.jobs[0].mainImg}
               imgsAlt={Data.portfolio.alt}
               jobDescription={Data.portfolio.jobs[0].jobDescription}
@@ -38,9 +39,9 @@ export default function Porftolio() {
               thirdImg={Data.portfolio.jobs[0].thirdImg} imgsAlt={Data.portfolio.alt}
               fourthImg={Data.portfolio.jobs[0].fourthImg} imgsAlt={Data.portfolio.alt}
               fifthImg={Data.portfolio.jobs[0].fourthImg} imgsAlt={Data.portfolio.alt}
-            />
+            /> */}
           </div>
-          <div className="col-lg-6 portfolio-modules">
+          {/* <div className="col-lg-6 portfolio-modules">
             <PortfolioModule
               mainImg={Data.portfolio.jobs[1].mainImg}
               imgsAlt={Data.portfolio.alt}
@@ -124,7 +125,7 @@ export default function Porftolio() {
               fourthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
               fifthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
             />
-          </div>
+          </div> */}
         </div>
       </div>
       <Footer />
