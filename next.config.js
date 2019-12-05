@@ -4,7 +4,7 @@ const config = withSass();
 
 const sitemap = require('nextjs-sitemap-generator');  
 sitemap({  
-  baseUrl: '<your_website_base_url>',  
+  baseUrl: 'https://jcc-const.herokuapp.com/',  
   pagesDirectory: __dirname + "/pages",  
   targetDirectory : 'static/'  
 });

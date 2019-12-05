@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="container footer-nav">
       <div className="row" >
           <div className="col-2 logo-container">
-            <img className="logo" src="../static/img/icon_img1.png" />
+            <img className="logo" src="../static/img/icon_img1.png" alt="JCC Construction Website"/>
           </div>
           <div className="col-10 links">
 

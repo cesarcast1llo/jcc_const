@@ -29,7 +29,7 @@ export default class Header extends React.Component {
       <div className="header">
         <Navbar light expand="md" className="navbar">
           <NavbarBrand href="/">
-            <img className="logo" src="../static/img/icon_img1.png" />
+            <img className="logo" src="../static/img/icon_img1.png" alt="JCC Construction Website"/>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} >
             <img className="menuiconhidden" src="../static/img/hamburgermenu18x15@2x.png" width="18" />

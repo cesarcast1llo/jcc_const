@@ -74,9 +74,8 @@ class SubmitForm extends Component {
           success 
           title="Email has been sent!"
           onConfirm={() => this.confirmEmail()}
-          confirmBtnText	= "Aww yiss!"
         >
-         <span style={{fontWeight: 700}}>Thank you</span> for reaching out,<br/> we will contact you&nbsp;shortly.<br/>-JCC
+         <span style={{fontWeight: 700, paddingBottom: '5px', color: 'black'}}>Thank you<br/></span> We will be reaching out,<br/> we will contact you&nbsp;shortly.<br/>JC Construction
         </SweetAlert>
       );
       this.setState({
