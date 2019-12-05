@@ -42,20 +42,52 @@
                   padding: 10px;
                   outline: none !important;
                   box-shadow: none !important;
+                  text-shadow: none !important;
+                  opacity: 0 !important;
                }
             }
 
             .modal-body {
-               padding: 0 1rem 1rem;
+               padding: .5rem;
+               @media(min-width: $mobile) {
+                  padding: 1rem;
+               }
 
                .gallery-description {
-                  padding: 1rem 2rem;
+                  padding: 1rem;
+                  @media(min-width: $mobile) {
+                     padding: 2rem;
+                  }
 
                   .modal-title {
                      text-align: center;
                   }
                }
 
+               .carousel-control-prev {
+                  width: 7%;
+
+                  .carousel-control-prev-icon {
+                     width: 1rem;
+                     height: 1rem;
+                     @media(min-width: $mobile) {
+                        width: 2rem;
+                        height: 2rem;
+                     }
+                  }
+               }
+               .carousel-control-next {
+                  width: 7%;
+
+                  .carousel-control-next-icon {
+                     width: 1rem;
+                     height: 1rem;
+                     @media(min-width: $mobile) {
+                        width: 2rem;
+                        height: 2rem;
+                     }
+                  }
+               }
             }
 
             .modal-footer{

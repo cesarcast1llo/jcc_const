@@ -14,11 +14,6 @@ const PortfolioImages = (props) => {
 			<div className="modal fade modal" id={props.PopupID} tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 				<div className="modal-dialog modal-dialog-centered" role="document">
 					<div className="modal-content">
-						<div className="modal-header">
-							<button type="button" className="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
 						<div className="modal-body">
 							<Carousel pauseonhover="true" interval="4000">
 								<Carousel.Item>
@@ -60,7 +55,7 @@ const PortfolioImages = (props) => {
 							<div className="container">
 								<div className="row">
 									<div className="col-12 gallery-description">
-										<h3 className="modal-title" id="exampleModalLongTitle" dangerouslySetInnerHTML={{__html: props.jobTitle}}/>
+										<h2 className="modal-title" id="exampleModalLongTitle" dangerouslySetInnerHTML={{__html: props.jobTitle}}/>
 										<p className="job-img-description" dangerouslySetInnerHTML={{__html: props.jobSubTitle}} />
 									</div>
 								</div>

@@ -6,7 +6,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
 } from 'reactstrap';
 import "../styles/websitename.scss";
 
@@ -38,24 +37,24 @@ export default class Header extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem className="linkstyle">
-                <NavLink href="/">
-                  Home
-                </NavLink>
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
               </NavItem>
               <NavItem className="linkstyle">
-                <NavLink href="/about">
-                  About
-                </NavLink>
+                <Link href="/about">
+                  <a>About</a>
+                </Link>
               </NavItem>
               <NavItem className="linkstyle">
-                <NavLink href="/portfolio">
-                  Porfolio
-                </NavLink>
+                <Link href="/portfolio">
+                  <a>Porfolio</a>
+                </Link>
               </NavItem>
               <NavItem className="linkstyle">
-                <NavLink href="/contact">
-                  Contact
-                </NavLink>
+                <Link href="/contact">
+                  <a>Contact</a>
+                </Link>
               </NavItem>
             </Nav>
           </Collapse>
