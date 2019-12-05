@@ -138,12 +138,13 @@ class SubmitForm extends Component {
               <FormGroup className="form-group">
                 <Label for="exampleSelectMulti">How can we help you?</Label>
                 <Input 
-                type="textarea" 
-                name="message" 
-                id="message" 
-                rows="3"
-                value={this.state.message}
-                onChange={this.handleUserInput} />
+                  type="textarea" 
+                  name="message" 
+                  id="message" 
+                  rows="3"
+                  value={this.state.message}
+                  onChange={this.handleUserInput}
+                />
               </FormGroup>
             </div>
           </div>

@@ -16,7 +16,7 @@ export default function Index() {
       <Header/>
       <Marquee/>
       <h1>This is the index page</h1>
-      <img src="../static/img/icon_img1.png" />
+      <img src="../static/img/icon_img1.png"  alt="JCC Construction Website"/>
       <Footer/>
     </div>
   );

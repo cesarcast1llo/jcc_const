@@ -10,12 +10,12 @@ class Contact extends Component {
   render() {
     return (
     <div className="contact-page">
-      <Header/>
+      <Header />
       <HeadMeta
         title="Contact Page"
-        description=" "
+        description="filled in with description of page"
         keywords="keywords for google stuff"
-        />
+      />
       <SubmitForm />
       <Footer />
     </div>

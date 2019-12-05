@@ -10,7 +10,7 @@ export default function About() {
       <Header/>
       <HeadMeta
         title="About Page"
-        description=" "
+        description="filled in with description of page"
         keywords="keywords for google stuff"
         />
       <h1>This is the about page</h1>
