@@ -54,7 +54,7 @@ server.post('/sent', (req, res) => {
    function redirectContact() {
       res.redirect('contact');
    }
-   setTimeout(redirectContact, 5000);
+   setTimeout(redirectContact, 6000);
 });
 
 app.prepare().then(() => {

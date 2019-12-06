@@ -4,14 +4,14 @@ const PortfolioImages = (props) => {
 
 	return(
 		<div>
-			<div className="card" data-toggle="modal" data-target={props.data.modalID}>
-				<img className="card-img-top" src={props.data.mainImg} alt={props.data.imgsAlt} />
+			<div className="card" data-toggle="modal" data-target={props.modalID}>
+				<img className="card-img-top" src={props.mainImg} alt={props.imgsAlt} />
 				<div className="card-body">
 					<p className="card-text" dangerouslySetInnerHTML={{__html: props.jobDescription}} />
 				</div>
-				<button type="button" className="btn btn-primary" data-toggle="modal" data-target={props.data.modalID}  dangerouslySetInnerHTML={{__html: props.buttonName}} />
+				<button type="button" className="btn btn-primary" data-toggle="modal" data-target={props.modalID}  dangerouslySetInnerHTML={{__html: props.buttonName}} />
 			</div>
-			<div className="modal fade modal" id={props.data.PopupID} tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div className="modal fade modal" id={props.PopupID} tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 				<div className="modal-dialog modal-dialog-centered" role="document">
 					<div className="modal-content">
 						<div className="modal-body">
@@ -19,36 +19,36 @@ const PortfolioImages = (props) => {
 								<Carousel.Item>
 									<img
 										className="d-block w-100"
-										src={props.data.firstImg}
-										alt={props.data.imgsAlt}
+										src={props.firstImg}
+										alt={props.imgsAlt}
 									/>
 								</Carousel.Item>
 								<Carousel.Item>
 									<img
 										className="d-block w-100"
-										src={props.data.secondImg}
-										alt={props.data.imgsAlt}
+										src={props.secondImg}
+										alt={props.imgsAlt}
 									/>
 								</Carousel.Item>
 								<Carousel.Item>
 									<img
 										className="d-block w-100"
-										src={props.data.thirdImg}
-										alt={props.data.imgsAlt}
+										src={props.thirdImg}
+										alt={props.imgsAlt}
 									/>
 								</Carousel.Item>
 								<Carousel.Item>
 									<img
 										className="d-block w-100"
-										src={props.data.fourthImg}
-										alt={props.data.imgsAlt}
+										src={props.fourthImg}
+										alt={props.imgsAlt}
 									/>
 								</Carousel.Item>
 								<Carousel.Item>
 									<img
 										className="d-block w-100"
-										src={props.data.fifthImg}
-										alt={props.data.imgsAlt}
+										src={props.fifthImg}
+										alt={props.imgsAlt}
 									/>
 								</Carousel.Item>
 							</Carousel>

@@ -56,12 +56,21 @@
    .button-row {
       text-align: center;
       @media(min-width: $S) {
-         text-align: left;
          padding-top: 10px;
       }
 
       .submitbtn {
-         display: inline-block !important;
+         animation-duration: 2s;
+         animation-delay: 1s;
+         background-color: red;
+         color: white;
+         border: 0;
+
+         padding: 10px 35px;
+      }
+
+      .submitbtn:disabled {
+         opacity: .5;
       }
    }
    .sweet-alert {

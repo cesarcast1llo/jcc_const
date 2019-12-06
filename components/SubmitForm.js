@@ -91,6 +91,7 @@ class SubmitForm extends Component {
     }
 
   render() {
+    const { formValid } = this.state;
     return (
       <div className="container submit">
          <div className="row">
@@ -149,8 +150,8 @@ class SubmitForm extends Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-12 button-row animated slideInLeft delay-2s">
-              <Button className="submitbtn" type="submit" value="submit" disabled={!this.state.formValid} onClick={() => this.submitEmail()}>Submit</Button>
+            <div className="col-12 button-row">
+              <Button className={`submitbtn ${formValid ? "animated shake" : ""}`} type="submit" value="submit" disabled={!this.state.formValid} onClick={() => this.submitEmail()}>Submit</Button>
             </div>
           </div>
         </Form>

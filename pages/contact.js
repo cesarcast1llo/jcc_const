@@ -12,7 +12,7 @@ class Contact extends Component {
     <div className="contact-page">
       <Header />
       <HeadMeta
-        title="Contact Page"
+        title="Contact"
         description="filled in with description of page"
         keywords="keywords for google stuff"
       />
