@@ -3,9 +3,9 @@ import Carousel from 'react-bootstrap/Carousel';
 const PortfolioImages = (props) => {
 	let slide;
 	if (props.slide === 'left') {
-		slide = 'animated bounceInLeft delay-2s'
+		slide = 'animated bounceInLeft delay-5s'
 	} else {
-		slide = 'animated bounceInRight delay-2s'
+		slide = 'animated bounceInRight delay-5s'
 	}
 	return(
 		<div>
