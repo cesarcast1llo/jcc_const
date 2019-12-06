@@ -7,7 +7,7 @@
       background-image: url("/static/img/barca.png");
       background-repeat: no-repeat;
       background-position: center;
-      width: 500px;
+      max-width: 500px;
       height: 500px;
       -webkit-animation:spin 5s linear infinite;
       -moz-animation:spin 5s linear infinite;
@@ -38,5 +38,11 @@
       animation-duration: 2s;
       animation-delay: 2s;
    }
+
+   // update the positon of the spinner, middle of the page
+   // optimize it for mobile turn off and be static
+   // fix header menu 
+   // make it sexy
+
 
 }

@@ -5,7 +5,7 @@ const Footer = () => (
   <div className="footer">
     <div className="footer-container">
       <div className="container footer-nav">
-      <div className="row" >
+        <div className="row" >
           <div className="col-2 logo-container">
             <img className="logo" src="../static/img/icon_img1.png" alt="JCC Construction Website"/>
           </div>
