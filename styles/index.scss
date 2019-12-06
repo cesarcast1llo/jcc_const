@@ -1,5 +1,21 @@
 .home-page {
-   background-color: black;
+   // height: 1000px;
+
+   .index-bgImg {
+      // background-color: #262626;
+      position: absolute;
+      background-image: url("/static/img/barca.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 500px;
+      height: 500px;
+      -webkit-animation:spin 5s linear infinite;
+      -moz-animation:spin 5s linear infinite;
+      animation:spin 5s linear infinite;
+      @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+      @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+      @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+   }
 
    .acqua {
       background: linear-gradient(to bottom, #262626, #ffffff);
@@ -19,8 +35,8 @@
 
    .index-component {
 
-      // animation-duration: 5s;
-      // animation-delay: 5s;
+      animation-duration: 2s;
+      animation-delay: 2s;
    }
 
 }

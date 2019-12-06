@@ -8,14 +8,15 @@ import "../styles/websitename.scss";
 
 export default function Index() {
   return (
-    <div className="home-page">
+    <div>
       <HeadMeta
         title="Welcome"
         description="JCC Construction"
         keywords="keywords for google stuff"
       />
       <Header/>
-      {/* <Marquee/> */}
+      <div className="home-page">
+        <div className="index-bgImg"></div>
       <IndexComponent bgcolor="acqua" slide="left">
         <h1>This is the index page</h1>
         <h1>This is the index page</h1>
@@ -40,6 +41,7 @@ export default function Index() {
         <h1>This is the index page</h1>
         <h1>This is the index page</h1>
       </IndexComponent>
+      </div>
       <Footer/>
     </div>
   );
