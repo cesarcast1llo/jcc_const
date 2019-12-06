@@ -1,0 +1,26 @@
+.home-page {
+   background-color: black;
+
+   .acqua {
+      background: linear-gradient(to bottom, #262626, #ffffff);
+      color: white;
+      height: 500px;
+      text-align: left;
+      // for now
+   }
+
+   .black {
+      background: linear-gradient(to bottom, #ffffff, #262626);
+      color: black;
+      height: 500px;
+      text-align: right;
+      // for now
+   }
+
+   .index-component {
+
+      // animation-duration: 5s;
+      // animation-delay: 5s;
+   }
+
+}

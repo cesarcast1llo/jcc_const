@@ -25,6 +25,7 @@ export default function Porftolio() {
         <div className="row">
           <div className="col-lg-6 portfolio-modules">
             <PortfolioModule
+              slide="left"
               mainImg={Data.portfolio.jobs[0].mainImg}
               imgsAlt={Data.portfolio.alt}
               jobDescription={Data.portfolio.jobs[0].jobDescription}
@@ -42,6 +43,7 @@ export default function Porftolio() {
           </div>
           <div className="col-lg-6 portfolio-modules">
             <PortfolioModule
+              slide="right"
               mainImg={Data.portfolio.jobs[1].mainImg}
               imgsAlt={Data.portfolio.alt}
               jobDescription={Data.portfolio.jobs[1].jobDescription}
@@ -57,8 +59,29 @@ export default function Porftolio() {
               fifthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
             />
           </div>
+        </div>
+        <div className="row">
+        <div className="col-lg-6 portfolio-modules">
+            <PortfolioModule
+              slide="left"
+              mainImg={Data.portfolio.jobs[0].mainImg}
+              imgsAlt={Data.portfolio.alt}
+              jobDescription={Data.portfolio.jobs[0].jobDescription}
+              modalID="#one"
+              buttonName={Data.portfolio.jobs[0].buttonName}
+              PopupID="one"
+              jobTitle={Data.portfolio.jobs[0].jobTitle}
+              jobSubTitle={Data.portfolio.jobs[0].jobSubTitle}
+              firstImg={Data.portfolio.jobs[0].firstImg} imgsAlt={Data.portfolio.alt}
+              secondImg={Data.portfolio.jobs[0].secondImg} imgsAlt={Data.portfolio.alt}
+              thirdImg={Data.portfolio.jobs[0].thirdImg} imgsAlt={Data.portfolio.alt}
+              fourthImg={Data.portfolio.jobs[0].fourthImg} imgsAlt={Data.portfolio.alt}
+              fifthImg={Data.portfolio.jobs[0].fourthImg} imgsAlt={Data.portfolio.alt}
+            />
+          </div>
           <div className="col-lg-6 portfolio-modules">
             <PortfolioModule
+              slide="right"
               mainImg={Data.portfolio.jobs[1].mainImg}
               imgsAlt={Data.portfolio.alt}
               jobDescription={Data.portfolio.jobs[1].jobDescription}
@@ -74,47 +97,34 @@ export default function Porftolio() {
               fifthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
             />
           </div>
+        </div>
+        <div className="row">
           <div className="col-lg-6 portfolio-modules">
             <PortfolioModule
-              mainImg={Data.portfolio.jobs[1].mainImg}
+              slide="left"
+              mainImg={Data.portfolio.jobs[0].mainImg}
               imgsAlt={Data.portfolio.alt}
-              jobDescription={Data.portfolio.jobs[1].jobDescription}
-              modalID="#two"
+              jobDescription={Data.portfolio.jobs[0].jobDescription}
+              modalID="#one"
               buttonName={Data.portfolio.jobs[0].buttonName}
-              PopupID="two"
-              jobTitle={Data.portfolio.jobs[1].jobTitle}
-              jobSubTitle={Data.portfolio.jobs[1].jobSubTitle}
-              firstImg={Data.portfolio.jobs[1].firstImg} imgsAlt={Data.portfolio.alt}
-              secondImg={Data.portfolio.jobs[1].secondImg} imgsAlt={Data.portfolio.alt}
-              thirdImg={Data.portfolio.jobs[1].thirdImg} imgsAlt={Data.portfolio.alt}
-              fourthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
-              fifthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
+              PopupID="one"
+              jobTitle={Data.portfolio.jobs[0].jobTitle}
+              jobSubTitle={Data.portfolio.jobs[0].jobSubTitle}
+              firstImg={Data.portfolio.jobs[0].firstImg} imgsAlt={Data.portfolio.alt}
+              secondImg={Data.portfolio.jobs[0].secondImg} imgsAlt={Data.portfolio.alt}
+              thirdImg={Data.portfolio.jobs[0].thirdImg} imgsAlt={Data.portfolio.alt}
+              fourthImg={Data.portfolio.jobs[0].fourthImg} imgsAlt={Data.portfolio.alt}
+              fifthImg={Data.portfolio.jobs[0].fourthImg} imgsAlt={Data.portfolio.alt}
             />
           </div>
           <div className="col-lg-6 portfolio-modules">
             <PortfolioModule
+              slide="right"
               mainImg={Data.portfolio.jobs[1].mainImg}
               imgsAlt={Data.portfolio.alt}
               jobDescription={Data.portfolio.jobs[1].jobDescription}
               modalID="#two"
-              buttonName={Data.portfolio.jobs[0].buttonName}
-              PopupID="two"
-              jobTitle={Data.portfolio.jobs[1].jobTitle}
-              jobSubTitle={Data.portfolio.jobs[1].jobSubTitle}
-              firstImg={Data.portfolio.jobs[1].firstImg} imgsAlt={Data.portfolio.alt}
-              secondImg={Data.portfolio.jobs[1].secondImg} imgsAlt={Data.portfolio.alt}
-              thirdImg={Data.portfolio.jobs[1].thirdImg} imgsAlt={Data.portfolio.alt}
-              fourthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
-              fifthImg={Data.portfolio.jobs[1].fourthImg} imgsAlt={Data.portfolio.alt}
-            />
-          </div>
-          <div className="col-lg-6 portfolio-modules">
-            <PortfolioModule
-              mainImg={Data.portfolio.jobs[1].mainImg}
-              imgsAlt={Data.portfolio.alt}
-              jobDescription={Data.portfolio.jobs[1].jobDescription}
-              modalID="#two"
-              buttonName={Data.portfolio.jobs[0].buttonName}
+              buttonName={Data.portfolio.jobs[1].buttonName}
               PopupID="two"
               jobTitle={Data.portfolio.jobs[1].jobTitle}
               jobSubTitle={Data.portfolio.jobs[1].jobSubTitle}

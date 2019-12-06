@@ -1,10 +1,15 @@
 import Carousel from 'react-bootstrap/Carousel';
 
 const PortfolioImages = (props) => {
-
+	let slide;
+	if (props.slide === 'left') {
+		slide = 'animated bounceInLeft delay-2s'
+	} else {
+		slide = 'animated bounceInRight delay-2s'
+	}
 	return(
 		<div>
-			<div className="card" data-toggle="modal" data-target={props.modalID}>
+			<div className={`card ${slide}`} data-toggle="modal" data-target={props.modalID}>
 				<img className="card-img-top" src={props.mainImg} alt={props.imgsAlt} />
 				<div className="card-body">
 					<p className="card-text" dangerouslySetInnerHTML={{__html: props.jobDescription}} />
