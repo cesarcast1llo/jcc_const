@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 .blackout {
-   // display: flex;
-   justify-content: center;
+   margin-top: 40%;
    height: 100vh;
    width: 100vw;
 
+   @media(min-width: $S) {
+      display: flex;
+   }
+
    .loading-text {
-      
       text-align: center;
-      margin: 0 auto;
       font-family: "Montserrat";
       align-self: center;
       display:block;
@@ -29,44 +30,38 @@
       }
 
       @media(min-width: $S) {
+         font-size: 6rem;
+         display: inline-block;
+      }
+
+      @media(min-width: $M) {
          font-size: 8rem;
+         display: inline-block;
       }
     }
     
     #jc.loading-text {
-      animation: showup 7s infinite;
+      animation: showup 1s;
     }
     
     #const.loading-text {
-      width:0px;
-      animation: reveal 7s infinite;
-    }
-    
-    #const.loading-text span {
-      animation: slidein 7s infinite;
+      animation: slidein 4s;
     }
     
     @keyframes showup {
         0% {opacity:0;}
         20% {opacity:1;}
         80% {opacity:1;}
-        100% {opacity:0;}
+        100% {opacity:1;}
     }
     
-   //  @keyframes slidein {
-   //      0% { margin-left:0; }
-   //      20% { margin-left:0px; }
-   //      35% { margin-left:0px; }
-   //      100% { margin-left:0px; }
-   //  }
+    @keyframes slidein {
+      0% { margin-left:-18000px; }
+      20% { margin-left:-18000px; }
+      35% { margin-left:-1800px; }
+      100% { margin-left:0px; }
+   }
     
-    @keyframes reveal {
-        0% {opacity:0;width:0px;}
-        20% {opacity:1;width:0px;}
-        30% {width: 100%;}
-        80% {opacity:1;}
-        100% {opacity:0;width: 100%;}
-    }
 }
 
 .home-page {
@@ -118,9 +113,9 @@
    }
 
    .index-component {
-
-      animation-duration: 1s;
-      animation-delay: 1s;
+      content: 'sds';
+      animation-duration: 750ms;
+      animation-delay: 750ms;
    }
 
    // update the positon of the spinner, middle of the page

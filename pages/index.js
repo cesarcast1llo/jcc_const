@@ -18,7 +18,7 @@ class Index extends Component {
   }
 
   componentDidMount() {
-    this.interval = setInterval(() => this.setState({ loading: false }), 4000);
+    this.interval = setInterval(() => this.setState({ loading: false }), 10000);
   }
 
   componentWillUnmount() {
@@ -32,7 +32,7 @@ class Index extends Component {
         <div id="jc" className="loading-text">JC</div>
 <br/>
         <div id="const" className="loading-text"> 
-          <span>CCCCCCCC</span>
+        &nbsp;CCCCCCCCC
         </div>
       </div> 
       :
