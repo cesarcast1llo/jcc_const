@@ -16,7 +16,7 @@ const IndexComponent = (props) => {
   }
   return (
       <div className={`index-component ${alternateColor} ${slide}`}>
-        <p>{props.children}</p>
+        {props.children}
       </div>
   );
 };
