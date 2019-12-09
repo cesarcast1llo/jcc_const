@@ -30,7 +30,6 @@ class Index extends Component {
     this.state.loading ? 
       <div className="blackout">
         <div id="jc" className="loading-text">JC</div>
-<br/>
         <div id="const" className="loading-text"> 
         &nbsp;CCCCCCCCC
         </div>

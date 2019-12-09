@@ -1,22 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 .blackout {
-   margin-top: 40%;
+   padding-top: 40%;
    height: 100vh;
    width: 100vw;
+   background-color: black;
 
    @media(min-width: $S) {
       display: flex;
+
+      justify-content: center;
    }
 
    .loading-text {
       text-align: center;
       font-family: "Montserrat";
-      align-self: center;
-      display:block;
-      overflow:hidden;
-      white-space:nowrap;
-      font-size: 3.5rem;
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 3rem;
       background-image: url('https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif');
       -moz-background-clip: text;
       -webkit-background-clip: text;
@@ -26,39 +28,40 @@
       text-transform: uppercase;
 
       @media(min-width: $mobile) {
-         font-size: 5.5rem;
+         font-size: 4rem;
       }
 
       @media(min-width: $S) {
-         font-size: 6rem;
+         font-size: 4rem;
          display: inline-block;
       }
 
       @media(min-width: $M) {
-         font-size: 8rem;
+         font-size: 4rem;
          display: inline-block;
       }
     }
     
     #jc.loading-text {
-      animation: showup 1s;
+      animation: fadeIn 3s;
     }
     
     #const.loading-text {
-      animation: slidein 4s;
+      animation: slidein 3s;
     }
     
-    @keyframes showup {
-        0% {opacity:0;}
-        20% {opacity:1;}
-        80% {opacity:1;}
-        100% {opacity:1;}
+    @keyframes fadeIn {
+       from {
+          opacity: 0;
+       } to {
+          opacity: 1;
+       }
     }
     
     @keyframes slidein {
-      0% { margin-left:-18000px; }
-      20% { margin-left:-18000px; }
-      35% { margin-left:-1800px; }
+      0% { margin-left:-1700px; }
+      20% { margin-left:-1700px; }
+      35% { margin-left:-1700px; }
       100% { margin-left:0px; }
    }
     
