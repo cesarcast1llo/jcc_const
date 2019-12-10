@@ -6,9 +6,6 @@ import Marquee from '../components/Marquee';
 import IndexComponent from '../components/IndexComponent';
 
 
-import ClipLoader from "react-spinners/ClipLoader";
-
-
 class Index extends Component {
   constructor(props) {
     super(props);
@@ -17,8 +14,17 @@ class Index extends Component {
     };
   }
 
-  componentDidMount() {
-    this.interval = setInterval(() => this.setState({ loading: false }), 10000);
+  // componentDidMount() {
+  //   let visited = sessionStorage["alreadyVisited"];
+  //   if (visited) {
+  //     this.setState({ loading: true })
+  //   } else {
+  //     // this.setState({loading: false})
+  //     this.interval = setInterval(() => this.setState({ loading: true }), 3000);
+  //   }
+
+  componentDidMount () {
+    this.interval = setInterval(() => this.setState({ loading: false }), 7000);
   }
 
   componentWillUnmount() {
@@ -27,13 +33,23 @@ class Index extends Component {
 
   render() {
   return (
-    this.state.loading ? 
-      <div className="blackout">
-        <div id="jc" className="loading-text">JC</div>
-        <div id="const" className="loading-text"> 
-        &nbsp;CCCCCCCCC
-        </div>
-      </div> 
+    this.state.loading ?
+      <div>
+        <HeadMeta
+          title="Welcome"
+          description="JCC Construction"
+          keywords="keywords for google stuff"
+        /> 
+        <Header/>
+        <div className="blackout">
+          <div id="jc" className="loading-text">JC</div>
+            <br/>
+          <div id="const" className="loading-text"> 
+          &nbsp;CCCCCCCCC
+          </div>
+        </div> 
+        <Footer/>
+      </div>
       :
     <div className="home-page">
       {/* <div className="spinner-container">

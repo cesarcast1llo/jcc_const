@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 .blackout {
-   padding-top: 40%;
-   height: 100vh;
-   width: 100vw;
-   background-color: black;
+   position:fixed;
+   top:0;
+   left:0;
+   z-index:10;
+   width:100%;
+   height:100%;
+   background-color: rgba(0, 0, 0, 0.998);
 
    @media(min-width: $S) {
       display: flex;
@@ -13,6 +16,7 @@
    }
 
    .loading-text {
+      padding-top: 40%;
       text-align: center;
       font-family: "Montserrat";
       display: block;
@@ -59,9 +63,9 @@
     }
     
     @keyframes slidein {
-      0% { margin-left:-1700px; }
-      20% { margin-left:-1700px; }
-      35% { margin-left:-1700px; }
+      0% { margin-left:-17000px; }
+      20% { margin-left:-17000px; }
+      35% { margin-left:-17000px; }
       100% { margin-left:0px; }
    }
     
@@ -116,7 +120,6 @@
    }
 
    .index-component {
-      content: 'sds';
       animation-duration: 750ms;
       animation-delay: 750ms;
    }
