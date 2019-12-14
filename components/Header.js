@@ -1,65 +1,32 @@
-import Link from 'next/link';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-} from 'reactstrap';
-import "../styles/websitename.scss";
+import '../styles/websitename.scss';
+import Navigation from './Navbar';
+import useScrollPosition from "../hooks/useScrollPosition.js";
 
+const Header = () => {
+  const scrollPos = useScrollPosition();
+  const headerHeight = scrollPos;
+  let header = '';
+  let display = 'none';
 
-export default class Header extends React.Component {
-  constructor(props) {
-    super(props);
+  if (headerHeight > 960) {
+    header = '111111';
+    display = 'block';
+  } else {
+    header = '400px';
+  }
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      isOpen: false
-    };
-  }
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  }
-  render() {
-    return (
-      <div className="header">
-        <Navbar light expand="md" className="navbar">
-          <NavbarBrand href="/">
-            <img className="logo" src="../static/img/icon_img1.png" alt="JCC Construction Website"/>
-          </NavbarBrand>
-          <NavbarToggler onClick={this.toggle} >
-            <img className="menuiconhidden" src="../static/img/hamburgermenu18x15@2x.png" width="18" />
-          </NavbarToggler>
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem className="linkstyle">
-                <Link href="/">
-                  <a>Home</a>
-                </Link>
-              </NavItem>
-              <NavItem className="linkstyle">
-                <Link href="/about">
-                  <a>About</a>
-                </Link>
-              </NavItem>
-              <NavItem className="linkstyle">
-                <Link href="/portfolio">
-                  <a>Porfolio</a>
-                </Link>
-              </NavItem>
-              <NavItem className="linkstyle">
-                <Link href="/contact">
-                  <a>Contact</a>
-                </Link>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
-    );
-  }
+  console.log(header)
+  console.log(display)
+  return (
+    <div style={{position: 'fixed', 'z-index': '9999999', 'background-color': 'blue'}}>
+    headerHeight {headerHeight} header {header}
+    <div className="header" 
+    style={{display: `${display}`}} 
+    >
+      <Navigation />
+    </div>
+    </div>
+  );
 }
+
+export default Header;

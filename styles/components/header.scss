@@ -1,16 +1,21 @@
 .header {
-   background-color: gray;
-   z-index: 100;
+   background-color: black;
    color: white;
+   position: fixed;
+   z-index: 9999;
+   width: 100%;
 
    .navbar {
+      background-color: red;
       padding: 10px 20px;
+      position: fixed;
+      z-index: 9999;
+      width: 100%;
 
       img.logo {
          width: 50px;
          height: auto;
          margin-left: 25px;
-         z-index: 999;
       }
 
       .navbar-toggler {
