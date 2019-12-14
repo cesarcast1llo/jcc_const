@@ -4,28 +4,44 @@ import useScrollPosition from "../hooks/useScrollPosition.js";
 
 const Header = () => {
   const scrollPos = useScrollPosition();
-  const headerHeight = scrollPos;
+  if (typeof window === 'undefined') {
+    global.window = {}
+}
+  let width = window.innerWidth;
   let header = '';
-  let display = 'none';
+  let visibility = '';
+  let className = '';
 
-  if (headerHeight > 960) {
-    header = '111111';
-    display = 'block';
+  if (width > 768) {
+    if (scrollPos > 960) {
+      visibility = 'visible';
+      className = 'fadeIn';
+    } else {
+      header = '400px';
+      visibility = 'hidden'
+      className = 'fadeOut';
+    }
   } else {
-    header = '400px';
+    if (scrollPos > 700) {
+      visibility = 'visible';
+      className = 'fadeIn';
+    } else {
+      header = '400px';
+      visibility = 'hidden'
+      className = 'fadeOut';
+    }
   }
 
-  console.log(header)
-  console.log(display)
+  // console.log(header)
+  // console.log(visibility)
+
   return (
-    <div style={{position: 'fixed', 'z-index': '9999999', 'background-color': 'blue'}}>
-    headerHeight {headerHeight} header {header}
-    <div className="header" 
-    style={{display: `${display}`}} 
-    >
-      <Navigation />
+    // <div style={{position: 'fixed', zIndex: '9999999', backgroundColor: 'blue', color: 'white'}}>
+    // scrollPos {scrollPos} header {header}
+    <div className={`header ${className}`} style={{visibility: `${visibility}`}} >
+     <Navigation />
     </div>
-    </div>
+    // </div>
   );
 }
 

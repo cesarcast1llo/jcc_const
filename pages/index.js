@@ -36,7 +36,7 @@ export default class Index extends Component {
         <Header/>
       {this.state.loading ?
         <div>
-        <div class="parallax"></div>
+        <div className="parallax"></div>
         <IndexComponent bgcolor="acqua" slide="left">
           <h1>This is the index page</h1>
           <h1>This is the index page</h1>

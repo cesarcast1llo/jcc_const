@@ -1,17 +1,16 @@
 import { useState, useEffect } from "react";
 
 const useScrollPosition = () => {
-  if (typeof window === "undefined") return 0;
+   if (typeof window === 'undefined') {
+      global.window = {}
+  }
 
-  const image = window.pageYOffset + 30;
   const [scrollPos, setScrollPos] = useState(window.pageYOffset);
 
-  // On Scroll
   const onScroll = () => {
     setScrollPos(window.pageYOffset);
   };
 
-  // Add and remove the window listener
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
     return () => {
@@ -23,16 +22,6 @@ const useScrollPosition = () => {
 };
 
 export default useScrollPosition;
-
-
-  // var slide = $('yourIdOrClassName').offset().top;
-  // $(window).on('scroll', function() {
-  //   if($(window).scrollTop() > slide) {
-  //     $('nav').addClass('sticky');
-  //   } else {
-  //   $('nav').removeClass('sticky');
-  //   }
-  // });
 
 // function getWindowDimensions() {
 //    const { innerWidth: width, innerHeight: height } = window;

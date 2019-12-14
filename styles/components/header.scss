@@ -39,3 +39,43 @@
       }
    }
 }
+
+.fadeIn {
+   opacity: 1;
+   visibility: visible;
+   background-color: rgba(92, 91, 87, 0.9);
+   -webkit-transition: opacity 600ms, visibility 600ms;
+   transition: opacity 600ms, visibility 600ms;
+
+   @keyframes opacity {
+      0% {
+         opacity: 0;
+      }
+      50% {
+         opacity: .5;
+      }
+      100% {
+         opacity: 1;
+      }
+   }
+}
+
+.fadeOut {
+   opacity: 0;
+   visibility: hidden;
+   background-color: rgba(92, 91, 87, 0.9);
+   -webkit-transition: opacity 600ms, visibility 600ms;
+   transition: opacity 600ms, visibility 600ms;
+
+   @keyframes opacity {
+      0% {
+         opacity: 1;
+      }
+      50% {
+         opacity: .5;
+      }
+      100% {
+         opacity: 0;
+      }
+   }
+}
