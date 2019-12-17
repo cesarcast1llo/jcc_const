@@ -19,11 +19,9 @@ class Navigation extends Component {
     });
   }
 
-  
   render() {
     return (
       <div >
-
         <Navbar light expand="md" className="navbar">
           <NavbarBrand href="/">
             <img className="logo" src="../static/img/icon_img1.png" alt="JCC Construction Website"/>
