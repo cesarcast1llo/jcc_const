@@ -1,4 +1,4 @@
-import '../styles/websitename.scss';
+
 import Navigation from './Navbar';
 import useScrollPosition from "../hooks/useScrollPosition.js";
 import { withRouter } from 'next/router';

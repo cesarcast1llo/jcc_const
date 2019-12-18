@@ -1,22 +1,21 @@
 .header {
-   background-color: black;
-   color: white;
-   position: fixed;
    z-index: 9999;
-
+   // width: 100%;
+   background-color: red;
+   padding-bottom: 100px;
 
    .navbar {
       background-color: red;
+      color: white;
       padding: 10px 20px;
-      position: fixed;
-      z-index: 9999;
-      width: 100%;
       max-width: 1400px;
+      // position: fixed;
+      z-index: 9999;
+      // width: 100%;
 
       img.logo {
          width: 50px;
          height: auto;
-         margin-left: 25px;
       }
 
       .navbar-toggler {
@@ -44,7 +43,7 @@
 .fadeIn {
    opacity: 1;
    visibility: visible;
-   background-color: rgba(92, 91, 87, 0.9);
+   // background-color: rgba(92, 91, 87, 0.9);
    -webkit-transition: opacity 600ms, visibility 600ms;
    transition: opacity 600ms, visibility 600ms;
 
@@ -64,7 +63,7 @@
 .fadeOut {
    opacity: 0;
    visibility: hidden;
-   background-color: rgba(92, 91, 87, 0.9);
+   // background-color: rgba(92, 91, 87, 0.9);
    -webkit-transition: opacity 600ms, visibility 600ms;
    transition: opacity 600ms, visibility 600ms;
 

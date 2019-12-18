@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { FormErrors } from './FormErrors';
 import SweetAlert from 'react-bootstrap-sweetalert';
-import "../styles/websitename.scss";
 
 class SubmitForm extends Component {
    constructor(props) {

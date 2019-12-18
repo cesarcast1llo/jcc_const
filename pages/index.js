@@ -4,6 +4,7 @@ import HeadMeta from '../components/HeadMeta';
 import Footer from '../components/Footer';
 import IndexOverlay from '../components/IndexOverlay';
 import IndexComponent from '../components/IndexComponent';
+import ScrollAnimation from 'react-animate-on-scroll';
 import cookies from 'next-cookies';
 
 export default class Index extends Component {
@@ -27,8 +28,8 @@ export default class Index extends Component {
 
   reset() {
     this.setState({name: ``});
-    document.cookie = `name=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT`;
-    document.cookie = `visited=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT`;
+    document.cookie = `name=; path=/;`;
+    document.cookie = `visited=; path=/;`;
   }
 
   componentDidMount () {
@@ -41,47 +42,48 @@ export default class Index extends Component {
 
   render() {
     return (
-      <div>
+      <div className="index-page">
         <button type="button" style={{ color: `red`, zIndex: 20000000}} onClick={this.delHeader}>Delete Header</button>
-        <p>Visited? {this.state.name} <br/>
+        <p>Visited? {this.state.name}<br/>
         Delete cookie: <button onClick={this.reset}>Reset</button></p>
+
         {this.state.name === `` ?
         <IndexOverlay />
         :
-        <div><HeadMeta
+        <div>
+          <HeadMeta
           title="Welcome"
           description="JCC Construction"
           keywords="keywords for google stuff"
-        />
-        <Header/>
- 
-        <div className="parallax"></div>
-
-        <IndexComponent bgcolor="acqua" slide="left">
-          <h1>This is the index page</h1>
-          <h1>This is the index page</h1>
-          <h1>This is the index page</h1>
-          <h1>This is the index page</h1>
-        </IndexComponent>
-        <IndexComponent bgcolor="asda" slide="right">
-          <h1>This is the index page</h1>
-          <h1>This is the index page</h1>
-          <h1>This is the index page</h1>
-          <h1>This is the index page</h1>
-        </IndexComponent>
-        <IndexComponent bgcolor="acqua" slide="left">
-          <h1>This is the index page</h1>
-          <h1>This is the index page</h1>
-          <h1>This is the index page</h1>
-          <h1>This is the index page</h1>
-        </IndexComponent>
-        <IndexComponent bgcolor="asda" slide="right">
-          <h1>This is the index page</h1>
-          <h1>This is the index page</h1>
-          <h1>This is the index page</h1>
-          <h1>This is the index page</h1>
-        </IndexComponent>
-        <Footer/>        </div>
+          />
+          <Header/>
+          <div className="parallax"></div>
+          <IndexComponent bgcolor="acqua" slide="left">
+            <h1>This is the index page</h1>
+            <h1>This is the index page</h1>
+            <h1>This is the index page</h1>
+            <h1>This is the index page</h1>
+          </IndexComponent>
+          <IndexComponent bgcolor="asda" slide="right">
+            <h1>This is the index page</h1>
+            <h1>This is the index page</h1>
+            <h1>This is the index page</h1>
+            <h1>This is the index page</h1>
+          </IndexComponent>
+          <IndexComponent bgcolor="acqua" slide="left">
+            <h1>This is the index page</h1>
+            <h1>This is the index page</h1>
+            <h1>This is the index page</h1>
+            <h1>This is the index page</h1>
+          </IndexComponent>
+          <IndexComponent bgcolor="asda" slide="right">
+            <h1>This is the index page</h1>
+            <h1>This is the index page</h1>
+            <h1>This is the index page</h1>
+            <h1>This is the index page</h1>
+          </IndexComponent>
+          <Footer/>
+        </div>
       }
       </div>
       

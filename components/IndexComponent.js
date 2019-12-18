@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const IndexComponent = (props) => {
   let alternateColor;
@@ -14,10 +15,11 @@ const IndexComponent = (props) => {
   } else {
      slide = 'animated bounceInRight'
   }
+
   return (
-      <div className={`index-component ${alternateColor} ${slide}`}>
+      <ScrollAnimation className={`index-component ${alternateColor}`} animateIn={`${slide}`} animateOnce={true}>
         {props.children}
-      </div>
+      </ScrollAnimation>
   );
 };
 

@@ -1,108 +1,114 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-.acqua {
-   background: linear-gradient(to bottom, #262626, #ffffff);
-   color: white;
-   height: 500px;
-   text-align: left;
-   // for now
-}
-
-.black {
-   background: linear-gradient(to bottom, #ffffff, #262626);
-   color: black;
-   height: 500px;
-   text-align: right;
-   // for now
-}
-
-.parallax {
-   background-image: url("/static/img/dog.gif");
-   min-height: 700px;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-
-   @media(min-width: $S) {
-      background-attachment: fixed;
-      min-height: 1000px;
-      background-image: url("https://h7f7z2r7.stackpathcdn.com/sites/default/files/images/articles/housing-ap_2.jpg");
-   }
- }
-
-.index-component {
-   animation-duration: 750ms;
-   animation-delay: 750ms;
-}
-
-.blackout {
-   position:fixed;
-   top:0;
-   left:0;
-   z-index: 10;
-   width:100%;
-   height:100%;
-   background-color: rgba(0, 0, 0, 0.998);
-   margin-top: 40px;
-
-   @media(min-width: $S) {
-      display: flex;
-
-      justify-content: center;
+.index-page {
+   margin: 0 auto;
+   
+   .acqua {
+      background: linear-gradient(to bottom, #262626, #ffffff);
+      color: white;
+      height: 500px;
+      text-align: left;
+      // for now
    }
 
-   .loading-text {
-      padding-top: 20%;
-      text-align: center;
-      font-family: "Montserrat";
-      display: block;
-      overflow: hidden;
-      white-space: nowrap;
-      font-size: 3rem;
-      background-image: url('https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif');
-      -moz-background-clip: text;
-      -webkit-background-clip: text;
+   .black {
+      background: linear-gradient(to bottom, #ffffff, #262626);
+      color: black;
+      height: 500px;
+      text-align: right;
+      // for now
+   }
+
+   .parallax {
+      background-image: url("/static/img/dog.gif");
+      min-height: 700px;
+      background-position: center;
+      background-repeat: no-repeat;
       background-size: cover;
-      color: transparent;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-
-      @media(min-width: $mobile) {
-         font-size: 4rem;
-      }
 
       @media(min-width: $S) {
-         font-size: 4rem;
-         display: inline-block;
+         background-attachment: fixed;
+         min-height: 1000px;
+         background-image: url("https://h7f7z2r7.stackpathcdn.com/sites/default/files/images/articles/housing-ap_2.jpg");
+      }
+   }
+
+   .index-component {
+      max-width: 1400px;
+      margin: 0 auto;
+      animation-duration: 750ms;
+      animation-delay: 750ms;
+   }
+
+   .blackout {
+      position:fixed;
+      top:0;
+      left:0;
+      z-index: 10;
+      width:100%;
+      height:100%;
+      background-color: rgba(0, 0, 0, 0.998);
+      margin-top: 40px;
+
+      @media(min-width: $S) {
+         display: flex;
+
+         justify-content: center;
       }
 
-      @media(min-width: $M) {
-         font-size: 4rem;
-         display: inline-block;
+      .loading-text {
+         padding-top: 20%;
+         text-align: center;
+         font-family: "Montserrat";
+         display: block;
+         overflow: hidden;
+         white-space: nowrap;
+         font-size: 3rem;
+         background-image: url('https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif');
+         -moz-background-clip: text;
+         -webkit-background-clip: text;
+         background-size: cover;
+         color: transparent;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+
+         @media(min-width: $mobile) {
+            font-size: 4rem;
+         }
+
+         @media(min-width: $S) {
+            font-size: 4rem;
+            display: inline-block;
+         }
+
+         @media(min-width: $M) {
+            font-size: 4rem;
+            display: inline-block;
+         }
       }
-    }
-    
-    #jc.loading-text {
-      animation: fadeIn 3s;
-    }
-    
-    #const.loading-text {
-      animation: slidein 3s;
-    }
-    
-    @keyframes fadeIn {
-       from {
-          opacity: 0;
-       } to {
-          opacity: 1;
-       }
-    }
-    
-    @keyframes slidein {
-      0% { margin-left:-17000px; }
-      20% { margin-left:-17000px; }
-      35% { margin-left:-17000px; }
-      100% { margin-left:0px; }
+      
+      #jc.loading-text {
+         animation: fadeIn 3s;
+      }
+      
+      #const.loading-text {
+         animation: slidein 3s;
+      }
+      
+      @keyframes fadeIn {
+         from {
+            opacity: 0;
+         } to {
+            opacity: 1;
+         }
+      }
+      
+      @keyframes slidein {
+         0% { margin-left:-17000px; }
+         20% { margin-left:-17000px; }
+         35% { margin-left:-17000px; }
+         100% { margin-left:0px; }
+      }
+      
    }
-    
 }

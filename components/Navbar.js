@@ -22,7 +22,8 @@ class Navigation extends Component {
   render() {
     return (
       <div >
-        <Navbar light expand="md" className="navbar">
+        <Navbar light expand="md" className="navbar container fixed-top">
+        {/* "navbar container navbar-toggleable-sm fixed-top navbar-inverse bg-inverse"> */}
           <NavbarBrand href="/">
             <img className="logo" src="../static/img/icon_img1.png" alt="JCC Construction Website"/>
           </NavbarBrand>

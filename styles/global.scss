@@ -5,7 +5,6 @@ BODY {
   -moz-osx-font-smoothing: grayscale;
   margin: 0 auto;
   padding: 0;
-  max-width: 1400px;
   position: relative;
 }
 
@@ -14,6 +13,16 @@ BODY {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+/* style guide */
+$font-stack: 'Arial', sans-serif;
+$font-size-base: 12px;
+
+// screen sizes
+$L: 1200px;
+$M: 992px;
+$S: 768px;
+$mobile: 480px;
 
 // display: none @ 480px
 .em_hide480 {

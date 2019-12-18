@@ -1,8 +1,8 @@
-@import './variables';
+@import './global';
+@import './index';
+@import './contact';
+@import './portfolio';
+@import './about';
 @import './components/header';
 @import './components/footer';
-@import './components/SubmitForm.scss';
-@import './global';
 @import './components/marquee';
-@import './components/PortfolioModule';
-@import './index';

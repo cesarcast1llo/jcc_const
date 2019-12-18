@@ -14,23 +14,24 @@ export default function About() {
   let frindz = [foo.name, nar.name, buzz.name];
 
   return (
-    <div className="about-page">
-      <Header/>
-      <HeadMeta
-        title="About Page"
-        description="filled in with description of page"
-        keywords="keywords for google stuff"
-        />
-      { console.log(frindz)}
+      <div>
+        <Header/>
+        <HeadMeta
+          title="About Page"
+          description="filled in with description of page"
+          keywords="keywords for google stuff"
+          />
+        { console.log(frindz)}
 
-      { console.log('add two new frindezzz')}
+        { console.log('add two new frindezzz')}
 
-      { console.log(frindz = [...frindz, woody.name])}
-
-      <h1>This is the about page</h1>
-      {/* { console.log('%c frindz', 'color: orange;font-size: 40px;font-weight: 700;') }
-      { console.table([foo,nar, buzz]) } */}
-      <Footer />
-    </div>
+        { console.log(frindz = [...frindz, woody.name])}
+        <div className="about-page" style={{margin: '0 auto'}}>
+          <h1>This is the about page</h1>
+          {/* { console.log('%c frindz', 'color: orange;font-size: 40px;font-weight: 700;') }
+          { console.table([foo,nar, buzz]) } */}
+        </div>
+        <Footer />
+      </div>
   );
 }
