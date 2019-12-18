@@ -25,7 +25,7 @@ export default function Porftolio() {
             <div className="row">
               <div className="col-lg-6 portfolio-modules">
                 <PortfolioModule
-                  slide="left"
+                  slide="nnn"
                   mainImg={Data.portfolio.jobs[0].mainImg}
                   imgsAlt={Data.portfolio.alt}
                   jobDescription={Data.portfolio.jobs[0].jobDescription}
@@ -43,7 +43,7 @@ export default function Porftolio() {
               </div>
               <div className="col-lg-6 portfolio-modules">
                 <PortfolioModule
-                  slide="right"
+                  slide="nn"
                   mainImg={Data.portfolio.jobs[1].mainImg}
                   imgsAlt={Data.portfolio.alt}
                   jobDescription={Data.portfolio.jobs[1].jobDescription}

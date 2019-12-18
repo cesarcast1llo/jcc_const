@@ -58,7 +58,8 @@ export default class Index extends Component {
           />
           <Header/>
           <div className="parallax"></div>
-          <IndexComponent bgcolor="acqua" slide="left">
+          <IndexComponent bgcolor="acqua" slide="fadeIn">
+            change prop to props so slide can manage the animation
             <h1>This is the index page</h1>
             <h1>This is the index page</h1>
             <h1>This is the index page</h1>

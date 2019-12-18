@@ -12,12 +12,13 @@ const IndexComponent = (props) => {
 
   if (props.slide === 'left') {
      slide = 'animated bounceInLeft'
-  } else {
+  } 
+  if (props.slide === 'right') {
      slide = 'animated bounceInRight'
   }
 
   return (
-      <ScrollAnimation className={`index-component ${alternateColor}`} animateIn={`${slide}`} animateOnce={true}>
+      <ScrollAnimation className={`index-component ${alternateColor}`} animateIn={`${slide}`} animateOnce={true} delay={300}>
         {props.children}
       </ScrollAnimation>
   );

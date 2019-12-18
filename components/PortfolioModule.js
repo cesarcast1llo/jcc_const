@@ -4,20 +4,22 @@ import ScrollAnimation from 'react-animate-on-scroll';
 const PortfolioImages = (props) => {
 	let slide;
 	if (props.slide === 'left') {
-		slide = 'animated bounceInLeft delay-8s'
-	} else {
-		slide = 'animated bounceInRight delay-8s'
+		slide = 'animated bounceInLeft'
+	} 
+	if (props.slide === 'right') {
+		slide = 'animated bounceInRight'
 	}
 	return(
 		<div>
 			<ScrollAnimation animateIn={`${slide}`} animateOnce={true}>
-			<div className="card" data-toggle="modal" data-target={props.modalID}>
-				<img className="card-img-top" src={props.mainImg} alt={props.imgsAlt} />
-				<div className="card-body">
-					<p className="card-text" dangerouslySetInnerHTML={{__html: props.jobDescription}} />
+				<div className="card" data-toggle="modal" data-target={props.modalID}>
+					<img className="card-img-top" src={props.mainImg} alt={props.imgsAlt} />
+					<div className="card-body">
+						<p className="card-text" dangerouslySetInnerHTML={{__html: props.jobDescription}} />
+					</div>
+					<button type="button" className="btn btn-primary" data-toggle="modal" data-target={props.modalID}  dangerouslySetInnerHTML={{__html: props.buttonName}} />
+
 				</div>
-				<button type="button" className="btn btn-primary" data-toggle="modal" data-target={props.modalID}  dangerouslySetInnerHTML={{__html: props.buttonName}} />
-			</div>
 			</ScrollAnimation>
 			<div className="modal fade modal" id={props.PopupID} tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 				<div className="modal-dialog modal-dialog-centered" role="document">
