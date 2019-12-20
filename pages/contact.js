@@ -17,7 +17,7 @@ class Contact extends Component {
           keywords="keywords for google stuff"
         />
         <div className="contact-page">
-          <ScrollAnimation animateIn='fadeIn' animateOnce={true} delay={500}>
+          <ScrollAnimation animateIn='fadeIn' animateOnce={true} delay={300}>
             <SubmitForm />
           </ScrollAnimation>
         </div>

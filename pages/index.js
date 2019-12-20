@@ -58,26 +58,32 @@ export default class Index extends Component {
           />
           <Header/>
           <div className="parallax"></div>
-          <IndexComponent bgcolor="acqua" slide="fadeIn">
+          <IndexComponent bgcolor="acqua" animateIn='rotateInUpLeft'>
             change prop to props so slide can manage the animation
             <h1>This is the index page</h1>
             <h1>This is the index page</h1>
             <h1>This is the index page</h1>
             <h1>This is the index page</h1>
           </IndexComponent>
-          <IndexComponent bgcolor="asda" slide="right">
+          <IndexComponent bgcolor="asda" animateIn="rotateInUpRight" >
             <h1>This is the index page</h1>
             <h1>This is the index page</h1>
             <h1>This is the index page</h1>
             <h1>This is the index page</h1>
           </IndexComponent>
-          <IndexComponent bgcolor="acqua" slide="left">
+          <IndexComponent bgcolor="acqua" animateIn="rotateInUpLeft">
             <h1>This is the index page</h1>
             <h1>This is the index page</h1>
             <h1>This is the index page</h1>
             <h1>This is the index page</h1>
           </IndexComponent>
-          <IndexComponent bgcolor="asda" slide="right">
+          <IndexComponent bgcolor="asda" animateIn="rotateInUpRight" >
+            <h1>This is the index page</h1>
+            <h1>This is the index page</h1>
+            <h1>This is the index page</h1>
+            <h1>This is the index page</h1>
+          </IndexComponent>
+          <IndexComponent bgcolor="asda" animateIn="fadeIn" delay={500}>
             <h1>This is the index page</h1>
             <h1>This is the index page</h1>
             <h1>This is the index page</h1>

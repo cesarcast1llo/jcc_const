@@ -6,7 +6,6 @@
    .acqua {
       background: linear-gradient(to bottom, #262626, #ffffff);
       color: white;
-      height: 500px;
       text-align: left;
       // for now
    }
@@ -14,7 +13,6 @@
    .black {
       background: linear-gradient(to bottom, #ffffff, #262626);
       color: black;
-      height: 500px;
       text-align: right;
       // for now
    }
@@ -36,8 +34,8 @@
    .index-component {
       max-width: 1400px;
       margin: 0 auto;
-      animation-duration: 750ms;
-      animation-delay: 750ms;
+      height: 800px;
+      
    }
 
    .blackout {

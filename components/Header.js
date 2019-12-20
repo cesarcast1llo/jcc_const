@@ -19,28 +19,9 @@ const Header = ({ router }) => {
       scrollPos > 700 ? className = 'fadeIn' : className = 'fadeOut'
   : null;
 
-  // if (router.pathname === '/') {
-  //   if (width > 768) {
-  //     if (scrollPos > 960) {
-  //       className = 'fadeIn';
-  //     } else {
-  //       className = 'fadeOut';
-  //     }
-  //   } else {
-  //     if (scrollPos > 700) {
-  //       className = 'fadeIn';
-  //     } else {
-  //       className = 'fadeOut';
-  //     }
-  //   }
-  // } 
-
-  // console.log(header)
-  // console.log(visibility)
-
   return (
     <div className={`header ${className}`} style={{visibility: `${visibility}`}} >
-      <Navigation />
+        <Navigation />
     </div>
   );
 }

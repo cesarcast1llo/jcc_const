@@ -107,6 +107,7 @@ class SubmitForm extends Component {
             <Label for="exampleName" for="validationCustom01">Name</Label>
             <Input type="name" name="name" id="name"/>
           </FormGroup>
+          <div className="em_hide480">
           <div className="row">
             <div className="col-6 emailphone">
               <FormGroup className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
@@ -132,6 +133,7 @@ class SubmitForm extends Component {
               />
             </FormGroup >
             </div>
+          </div>
           </div>
           <div className="row">
             <div className="col-12 last-row">
