@@ -21,7 +21,6 @@ export default function Porftolio() {
             <div className="row">
               <div className="col-lg-12 portfolio-header">
                 <h1>Latest Jobs Completed</h1>
-                make portfolio size bigger
               </div>
             </div>
             <div className="row">

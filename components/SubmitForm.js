@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { FormErrors } from './FormErrors';
 import SweetAlert from 'react-bootstrap-sweetalert';

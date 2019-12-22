@@ -80,4 +80,4 @@ const PortfolioImages = (props) => {
 	)
 }
 
-export default PortfolioImages
+export default PortfolioImages;

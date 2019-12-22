@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Header from '../components/Header';
 import HeadMeta from '../components/HeadMeta';
 import ScrollAnimation from 'react-animate-on-scroll';

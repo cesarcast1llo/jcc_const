@@ -9,19 +9,37 @@ const Header = ({ router }) => {
     global.window = {}
 }
   let width = window.innerWidth;
-  let visibility = '';
-  let className = '';
+  let classAction = '';
+  let color = 'black';
+  // let none = 'none';
 
   router.pathname === '/' ?
     width > 768 ? 
-      scrollPos > 960 ? className = 'fadeIn' : className = 'fadeOut'
+      scrollPos > 990 ? classAction = 'fadeIn' : classAction = 'fadeOut'
     :
-      scrollPos > 700 ? className = 'fadeIn' : className = 'fadeOut'
+      scrollPos > 730 ? classAction = 'fadeIn' : classAction = 'fadeOut'
+  : null;
+
+  // router.pathname === '/' ? none === 'none' : null;
+
+  router.pathname === '/portfolio' ?
+  width > 768 ? 
+    scrollPos > 5 ? color = 'transparent' : color = 'black'
+  :
+    scrollPos > 5 ? color = 'transparent' : color = 'black'
   : null;
 
   return (
-    <div className={`header ${className}`} style={{visibility: `${visibility}`}} >
+    <div className={`header ${classAction}`} style={{backgroundColor: `${color}`,}} >
+      logo disappear on index, not other pages. how to nest in ternary operator to run multiple arguments at once. right now it's only for fade in of menu
+      <div className="nav-wrapper">
         <Navigation />
+      </div>
+      <div className="image-wrapper" 
+      // style={{display: `${none}`,}}
+      >
+        <img src="../static/img/jcc.png" alt="JCC" />
+      </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Header from '../components/Header';
 import HeadMeta from '../components/HeadMeta';
 import Footer from '../components/Footer';
@@ -43,9 +43,9 @@ export default class Index extends Component {
   render() {
     return (
       <div className="index-page">
-        <button type="button" style={{ color: `red`, zIndex: 20000000}} onClick={this.delHeader}>Delete Header</button>
+        {/* <button type="button" style={{ color: `red`, zIndex: 20000000}} onClick={this.delHeader}>Delete Header</button>
         <p>Visited? {this.state.name}<br/>
-        Delete cookie: <button onClick={this.reset}>Reset</button></p>
+        Delete cookie: <button onClick={this.reset}>Reset</button></p> */}
 
         {this.state.name === `` ?
         <IndexOverlay />
