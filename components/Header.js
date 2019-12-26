@@ -32,6 +32,7 @@ const Header = ({ router }) => {
   return (
     <div className={`header ${classAction}`} style={{backgroundColor: `${color}`,}} >
       logo disappear on index, not other pages. how to nest in ternary operator to run multiple arguments at once. right now it's only for fade in of menu
+      logo fade out
       <div className="nav-wrapper">
         <Navigation />
       </div>
