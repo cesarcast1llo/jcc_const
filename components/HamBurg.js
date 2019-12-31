@@ -20,7 +20,7 @@ class HamBurg extends Component {
     render() {
         return (
             <div>
-               <div id="flyoutMenu" className={ this.state.visibility ? 'show' : 'hide'}>
+               <div id="flyoutMenu" className={ this.state.visibility ? 'fadeIn' : 'fadeOut'}>
                <Link href="/">
                   <a className="bm-li">
                      Home

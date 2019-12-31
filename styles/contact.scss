@@ -1,31 +1,38 @@
 .contact-page {
    max-width: 1400px;
    margin: 0 auto;
+   padding-top: 60px;
    padding-bottom: 40px;
 
    .submit {
    
       .intro {
          text-align: center;
-         font-size: 1.8rem;
+         font-size: 1.5rem;
          line-height: 1;
          font-weight: 600;
          padding-top: 30px;
       }
    
       .states {
-         padding: 25px 0;
+         padding: 15px 0;
          color: red;
          font-weight: 600;
          font-size: .9rem;
          text-align: center;
-         @media(min-width: $mobile) {
+
+         @media(min-width: $S) {
             text-align: left;
             font-size: 1rem;
          }
-   
-         p {
-            margin: 0;
+
+         .formErrors {
+            height: 48px;
+
+            p {
+               margin: 0;
+               line-height: 24px;
+            }
          }
       }
    

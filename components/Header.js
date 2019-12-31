@@ -2,7 +2,6 @@
 import Link from "next/link";
 import useScrollPosition from "../hooks/useScrollPosition.js";
 import { withRouter } from 'next/router';
-import { stack as Menu } from "react-burger-menu";
 import HamBurg from "./HamBurg";
 
 const Header = ({ router }) => {
@@ -31,13 +30,11 @@ const Header = ({ router }) => {
 
   return (
     <div className={`header ${classAction}`} style={{backgroundColor: `${color}`,}} >
-      <div className="image-wrapper " 
-      // style={{display: `${none}`,}}
-      >
+      <div className="image-wrapper" >
         <img src="../static/img/jcc.png" alt="JCC" />
       </div>
       <div className={`nav-wrapper ${headerAction}`}>
-      <HamBurg />
+        <HamBurg />
       </div>
 
       
