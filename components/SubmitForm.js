@@ -36,15 +36,15 @@ class SubmitForm extends Component {
       switch(fieldName) {
         case 'email':
           emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-          fieldValidationErrors.Email = emailValid ? '' : ' is invalid';
+          fieldValidationErrors.Email = emailValid ? 'valid.' : ' is invalid.';
           break;
         case 'number':
           numberValid = value.match(/^\d{3}-?\d{3}-?\d{4}$/);
-          fieldValidationErrors.Number = numberValid ? '': 'is invalid';
+          fieldValidationErrors.Number = numberValid ? 'valid.': 'is invalid.';
           break;
         case 'message':
           messageValid = value.match(/^([a-zA-Z0-9_!@#\$%\^\&*\)\(+=._-]+)([a-zA-Z0-9_ !@#\$%\^\&*\)\(+=._-]){15}/);
-          fieldValidationErrors.Message = messageValid ? <p>valid &#10004;</p> : 'at least 15 characters';
+          fieldValidationErrors.Message = messageValid ? 'valid.': 'at least 15 characters.';
           break;
         default:
           break;
@@ -95,11 +95,12 @@ class SubmitForm extends Component {
          <Row>
             <Col className="intro">
               What can we help you&nbsp;with?
+              <br/> change color of message from red to green when passes test. figure out how to pass HTML for ternary operators. reduce height from message area.
             </Col>
          </Row>
         <Form className="form" method="POST" action="sent">
           <div className="states">
-            {this.state.formValid ? null :
+            {this.state.formValid ? <div>Email, Phone Number, and&nbsp;Message&nbsp;All&nbp;Correct.&#10004;</div> :
              <div>Email, Phone Number, and&nbsp;Message&nbsp;Required <FormErrors formErrors={this.state.formErrors} /></div>
             }
           </div>

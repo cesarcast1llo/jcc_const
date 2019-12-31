@@ -33,6 +33,7 @@ const Header = ({ router }) => {
       <div className="image-wrapper" >
         <img src="../static/img/jcc.png" alt="JCC" />
       </div>
+      fix header overlay. fadeout after 60px or height of header, fixed.
       <div className={`nav-wrapper ${headerAction}`}>
         <HamBurg />
       </div>

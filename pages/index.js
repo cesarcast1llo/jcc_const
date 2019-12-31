@@ -60,6 +60,7 @@ export default class Index extends Component {
           <div className="parallax"></div>
           <IndexComponent bgcolor="acqua" animateIn='rotateInUpLeft'>
             change prop to props so slide can manage the animation
+            when header fades in after parallax, make sure its transparent like portfolio page
             <h1>This is the index page</h1>
             <h1>This is the index page</h1>
             <h1>This is the index page</h1>
