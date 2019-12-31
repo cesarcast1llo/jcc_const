@@ -16,29 +16,40 @@
    
       .states {
          padding: 15px 0;
-         color: red;
+         // color: red;
          font-weight: 600;
          font-size: .9rem;
          text-align: center;
+         height: 65px;
+         color: red;
 
          @media(min-width: $S) {
             text-align: left;
             font-size: 1rem;
          }
-
+          
          .color {
             color: green;
          }
 
          .formErrors {
-            height: 48px;
+            color: black;
 
             p {
                margin: 0;
                line-height: 24px;
                display: inline-block;
                margin-right: 5px;
+               -webkit-animation-duration: .5s;
+               -webkit-animation-fill-mode: both;
+               animation-fill-mode: both;
+               -webkit-animation-name: zoomIn;
+               animation-name: zoomIn;
+               animation-duration: .5s;
             }
+            p:nth-child(2) {
+               color: red;
+             }
          }
       }
    

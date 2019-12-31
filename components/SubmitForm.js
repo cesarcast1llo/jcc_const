@@ -36,15 +36,15 @@ class SubmitForm extends Component {
       switch(fieldName) {
         case 'email':
           emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-          fieldValidationErrors.Email = emailValid ? 'valid.' : ' is invalid.';
+          fieldValidationErrors.Email = emailValid ? 'is valid.' : 'is invalid.';
           break;
         case 'number':
           numberValid = value.match(/^\d{3}-?\d{3}-?\d{4}$/);
-          fieldValidationErrors.Number = numberValid ? 'valid.': 'is invalid.';
+          fieldValidationErrors.Number = numberValid ? 'is valid.': 'is invalid.';
           break;
         case 'message':
           messageValid = value.match(/^([a-zA-Z0-9_!@#\$%\^\&*\)\(+=._-]+)([a-zA-Z0-9_ !@#\$%\^\&*\)\(+=._-]){15}/);
-          fieldValidationErrors.Message = messageValid ? 'valid.': 'at least 15 characters.';
+          fieldValidationErrors.Message = messageValid ? 'is valid.': 'at least 15 characters.';
           break;
         default:
           break;
@@ -88,6 +88,15 @@ class SubmitForm extends Component {
       });
     }
 
+    getHighlightedText(text, higlight) {
+      let parts = text.split(new RegExp(`(${higlight})`, 'gi'));
+      return <span> { parts.map((part, i) => 
+          <span key={i} style={part.toLowerCase() === higlight.toLowerCase() ? { fontWeight: 'bold' } : {} }>
+              { part }
+          </span>)
+      } </span>;
+  }
+
   render() {
     const { formValid } = this.state;
     return (
@@ -95,14 +104,15 @@ class SubmitForm extends Component {
          <Row>
             <Col className="intro">
               What can we help you&nbsp;with?
-              <br/> change color of message from red to green when passes test. figure out how to pass HTML for ternary operators. reduce height from message area.
             </Col>
          </Row>
         <Form className="form" method="POST" action="sent">
           <div className="states">
-            {this.state.formValid ? <div>Email, Phone Number, and&nbsp;Message&nbsp;All&nbp;Correct.&#10004;</div> :
-             <div>Email, Phone Number, and&nbsp;Message&nbsp;Required <FormErrors formErrors={this.state.formErrors} /></div>
+
+            {this.state.formValid ? <div className="color">Email, Phone Number, and&nbsp;Message&nbsp;All&nbsp;Correct.</div> :
+             <div>Email, Phone Number, and&nbsp;Message&nbsp;Required <FormErrors className="animate shake" formErrors={this.state.formErrors} /></div>
             }
+
           </div>
           <FormGroup className="form-group">
             <Label for="exampleName" for="validationCustom01">Name</Label>
