@@ -33,7 +33,6 @@
     "react-animate-on-scroll": "^2.1.5",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-bootstrap-sweetalert": "^4.4.1",
-    "react-burger-menu": "^2.6.13",
     "react-dom": "^16.9.0",
     "reactstrap": "^8.0.1"
   },
