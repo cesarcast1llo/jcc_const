@@ -1,15 +1,15 @@
-.header {
-   // position: fixed;
-   z-index: 12;
+// .header {
+//    // position: fixed;
+//    z-index: 12;
 
-   // @media(min-width: 768px) {
-   //    padding-bottom: 25px;
-   //    padding-top: 25px;
-   // }
+//    // @media(min-width: 768px) {
+//    //    padding-bottom: 25px;
+//    //    padding-top: 25px;
+//    // }
    .nav-bar {
       padding: 0 0 0 1rem;
       // background-color: red;s
-      position: relative;
+      // position: relative;
 
       .image-wrapper {
          display: block;
@@ -64,7 +64,7 @@
          }
       }
    }
-}
+// }
 
 .fadeIn {
    opacity: 1;
