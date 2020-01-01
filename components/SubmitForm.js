@@ -17,6 +17,7 @@ class SubmitForm extends Component {
         numberValid: false,
         messageValid: false,
         formValid: false,
+        openMessage: 'Email, Phone Number, and Message Required'
       };
     }
    //  contact form validation 
@@ -88,17 +89,9 @@ class SubmitForm extends Component {
       });
     }
 
-    getHighlightedText(text, higlight) {
-      let parts = text.split(new RegExp(`(${higlight})`, 'gi'));
-      return <span> { parts.map((part, i) => 
-          <span key={i} style={part.toLowerCase() === higlight.toLowerCase() ? { fontWeight: 'bold' } : {} }>
-              { part }
-          </span>)
-      } </span>;
-  }
-
   render() {
     const { formValid } = this.state;
+    
     return (
       <Container className="submit">
          <Row>
@@ -109,10 +102,12 @@ class SubmitForm extends Component {
         <Form className="form" method="POST" action="sent">
           <div className="states">
 
-            {this.state.formValid ? <div className="color">Email, Phone Number, and&nbsp;Message&nbsp;All&nbsp;Correct.</div> :
-             <div>Email, Phone Number, and&nbsp;Message&nbsp;Required <FormErrors className="animate shake" formErrors={this.state.formErrors} /></div>
-            }
+            {this.state.emailValid ? '' : this.state.openMessage}
 
+            {this.state.formValid ? <div className="color">Email, Phone Number, and&nbsp;Message&nbsp;All&nbsp;Correct.</div> :
+             <FormErrors className="animate shake" formErrors={this.state.formErrors} />
+            }
+          
           </div>
           <FormGroup className="form-group">
             <Label for="exampleName" for="validationCustom01">Name</Label>

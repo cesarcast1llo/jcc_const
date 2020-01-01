@@ -21,7 +21,7 @@
          font-size: .9rem;
          text-align: center;
          height: 65px;
-         color: red;
+         font-style: italic;
 
          @media(min-width: $S) {
             text-align: left;
@@ -30,6 +30,7 @@
           
          .color {
             color: green;
+            font-style: normal;
          }
 
          .formErrors {
@@ -46,10 +47,11 @@
                -webkit-animation-name: zoomIn;
                animation-name: zoomIn;
                animation-duration: .5s;
+
+               span:nth-child(2) {
+                  color: red;
+                }
             }
-            p:nth-child(2) {
-               color: red;
-             }
          }
       }
    

@@ -1,5 +1,16 @@
-
-import Link from "next/link";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from 'reactstrap';
 import useScrollPosition from "../hooks/useScrollPosition.js";
 import { withRouter } from 'next/router';
 import HamBurg from "./HamBurg";
@@ -23,22 +34,21 @@ const Header = ({ router }) => {
       scrollPos > 730 ? classAction = 'fadeIn' : classAction = 'fadeOut'
   : null;
 
-  // router.pathname === '/portfolio' ?
-  //   // width > 768 ? 
-  //   scrollPos > 15 ? headerAction = 'fadeOut' : headerAction = 'fadeIn'
-  //   : null;
+  router.pathname === '/portfolio' ?
+    scrollPos > 50 ? classAction = 'fadeOut' : color = 'black' : null;
+    // scrollPos > 51 ? classAction = 'fadeIn' : null;
+
 
   return (
-    <div className={`header ${classAction}`} style={{backgroundColor: `${color}`,}} >
-      <div className="image-wrapper" >
-        <img src="../static/img/jcc.png" alt="JCC" />
-      </div>
-      fix header overlay. fadeout after 60px or height of header, fixed.
-      <div className={`nav-wrapper ${headerAction}`}>
-        <HamBurg />
-      </div>
-
-      
+    <div className="header" style={{backgroundColor: `${color}`,}}>
+      <Navbar className={`nav-bar ${classAction}`}>
+        <NavbarBrand className="image-wrapper">
+          <img className="logo-img" src="../static/img/jcc.png" alt="JCC" />
+        </NavbarBrand>
+        <div className={`nav-wrapper ${headerAction}`}>
+          <HamBurg />
+        </div>
+      </Navbar>
     </div>
   );
 }
