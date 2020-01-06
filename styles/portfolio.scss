@@ -1,136 +1,137 @@
 .portfolio-page {
-   background-color: gray;
-   margin: 0 auto;
-   padding-top: 60px;
-   padding-bottom: 40px;
+  background-color: gray;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 40px;
 
-   .portfolio-container {
-      max-width: 1200px;
-      padding-left: 10px;
-      padding-right: 10px;
-   
-      .portfolio-header {
-         max-width: 1400px;
-         padding: 50px 0;
-         text-align: center;
-      }
+  .portfolio-container {
+    max-width: 1200px;
+    padding-left: 10px;
+    padding-right: 10px;
 
-      .portfolio-modules {
-         padding-left: 5px;
-         padding-right: 5px;
+    .portfolio-header {
+      max-width: 1400px;
+      padding: 50px 0;
+      text-align: center;
+    }
 
-         .card {
-            margin-bottom: 50px;
-            display: block;
-            border: 0;
-            cursor: pointer;
+    .portfolio-modules {
+      padding-left: 5px;
+      padding-right: 5px;
+
+      .card {
+        margin-bottom: 50px;
+        display: block;
+        border: 0;
+        cursor: pointer;
+        text-align: center;
+        padding-bottom: 1.5rem;
+
+        .card-img-top {
+          border-radius: 0.25rem;
+        }
+
+        .card-body {
+          .card-text {
             text-align: center;
-            padding-bottom: 1.5rem;
+          }
+        }
 
-            .card-img-top {
-               border-radius: .25rem;
-            }
-
-            .card-body {
-
-               .card-text {
-                  text-align: center;
-               }
-            }
-
-            .btn {
-               padding: .8rem 3rem;
-            }
-         }
-
-         .modal {
-
-            .modal-dialog {
-               margin: 0 auto;
-               width: 95%;
-               @media(min-width: $mobile) {
-                  max-width: 768px;
-               }
-               @media(min-width: $S) {
-                  max-width: 992px;
-               }
-               @media(min-width: $M) {
-                  max-width: 1199px;
-               }
-
-               .modal-content {
-                  margin: 0 auto;
-
-                  .modal-header {
-                     border: 0;
-                     padding: .5rem 1rem;
-                     text-align: center;
-                     
-                     button.close:focus, button.close:active {
-                        padding: 10px;
-                        outline: none !important;
-                        box-shadow: none !important;
-                        text-shadow: none !important;
-                        opacity: 0 !important;
-                     }
-                  }
-
-                  .modal-body {
-                     padding: .5rem;
-                     @media(min-width: $mobile) {
-                        padding: 1rem;
-                     }
-
-                     .gallery-description {
-                        padding: 1rem;
-                        @media(min-width: $mobile) {
-                           padding: 2rem;
-                        }
-
-                        .modal-title {
-                           text-align: center;
-                        }
-                     }
-
-                     .carousel-control-prev {
-                        width: 7%;
-
-                        .carousel-control-prev-icon {
-                           width: 1rem;
-                           height: 1rem;
-                           @media(min-width: $mobile) {
-                              width: 2rem;
-                              height: 2rem;
-                           }
-                        }
-                     }
-                     .carousel-control-next {
-                        width: 7%;
-
-                        .carousel-control-next-icon {
-                           width: 1rem;
-                           height: 1rem;
-                           @media(min-width: $mobile) {
-                              width: 2rem;
-                              height: 2rem;
-                           }
-                        }
-                     }
-                  }
-
-                  .modal-footer{
-                     justify-content: center;
-
-                     .btn, .btn:focus, .btn:active {
-                        padding: .5rem 1.2rem;
-                        font-size: 20px;
-                        outline: none !important;
-                        box-shadow: none !important;
-                     }
-                  }
-               }
-            }
-         }
+        .btn {
+          padding: 0.8rem 3rem;
+        }
       }
-   }
+
+      .modal {
+        .modal-dialog {
+          margin: 0 auto;
+          width: 95%;
+          @media (min-width: $mobile) {
+            max-width: 768px;
+          }
+          @media (min-width: $S) {
+            max-width: 992px;
+          }
+          @media (min-width: $M) {
+            max-width: 1199px;
+          }
+
+          .modal-content {
+            margin: 0 auto;
+
+            .modal-header {
+              border: 0;
+              padding: 0.5rem 1rem;
+              text-align: center;
+
+              button.close:focus,
+              button.close:active {
+                padding: 10px;
+                outline: none !important;
+                box-shadow: none !important;
+                text-shadow: none !important;
+                opacity: 0 !important;
+              }
+            }
+
+            .modal-body {
+              padding: 0.5rem;
+              @media (min-width: $mobile) {
+                padding: 1rem;
+              }
+
+              .gallery-description {
+                padding: 1rem;
+                @media (min-width: $mobile) {
+                  padding: 2rem;
+                }
+
+                .modal-title {
+                  text-align: center;
+                }
+              }
+
+              .carousel-control-prev {
+                width: 7%;
+
+                .carousel-control-prev-icon {
+                  width: 1rem;
+                  height: 1rem;
+                  @media (min-width: $mobile) {
+                    width: 2rem;
+                    height: 2rem;
+                  }
+                }
+              }
+              .carousel-control-next {
+                width: 7%;
+
+                .carousel-control-next-icon {
+                  width: 1rem;
+                  height: 1rem;
+                  @media (min-width: $mobile) {
+                    width: 2rem;
+                    height: 2rem;
+                  }
+                }
+              }
+            }
+
+            .modal-footer {
+              justify-content: center;
+
+              .btn,
+              .btn:focus,
+              .btn:active {
+                padding: 0.5rem 1.2rem;
+                font-size: 20px;
+                outline: none !important;
+                box-shadow: none !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

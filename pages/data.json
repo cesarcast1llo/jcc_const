@@ -1,48 +1,51 @@
 {
-   "portfolio": {
-      "alt": [
-         "construction alt text needed here"
-      ],
-      "jobs": [{
-         "mainImg": [
-            "/static/img/test.jpg"
-         ],
-         "buttonName": [
-            "First Gallery"
-         ],
-         "jobDescription": [
-            "Job 1<br/> Started 01/01/2019 - Completed 04/01/2019 <br/> This was a renovated pool house with minimal stability foundation that was turned into a modern pool house with pillar stability and bathroom functionality"
-         ],
-         "jobTitle": [
-            "Corte Madera, CA - Bathroom Remodelation"
-         ],
-         "jobSubTitle": [
-            "Description of job and procedure <br/> Descroiption of jopb <br/> list the process"
-         ],
-         "firstImg": "/static/img/video-poster.jpg",
-         "secondImg": "/static/img/uncharted.jpg",
-         "thirdImg": "/static/img/uncharted.jpg",
-         "fourthImg": "/static/img/uncharted.jpg","fifthImg": "/static/img/uncharted.jpg"
-      }, {
-         "mainImg": [
-            "/static/img/test.jpg"
-         ],
-         "buttonName": [
-            "Second Gallery"
-         ],
-         "jobDescription": [
-            "Job 2<br/> Started 09/31/2019 - Completed 10/12/2019 <br/> This was a renovated pool house with minimal stability foundation that was turned into a modern pool house with pillar stability and bathroom functionality"
-         ],
-         "jobTitle": [
-            "Larkspur, CA - House Remodelation"
-         ],
-         "jobSubTitle": [
-            "Description of job and  procedure <br/> Descroiption of jopb <br/> list the process"
-         ],
-         "firstImg": "/static/img/video-poster.jpg",
-         "secondImg": "/static/img/uncharted.jpg",
-         "thirdImg": "/static/img/uncharted.jpg",
-         "fourthImg": "/static/img/uncharted.jpg","fifthImg": "/static/img/uncharted.jpg"
-      }]
-   }
+  "portfolio": {
+    "alt": ["construction alt text needed here"],
+    "jobs": [
+      {
+        "mainImg": ["/static/img/test.jpg"],
+        "buttonName": ["First Gallery"],
+        "jobDescription": [
+          "Job 1<br/> Started 01/01/2019 - Completed 04/01/2019 <br/> This was a renovated pool house with minimal stability foundation that was turned into a modern pool house with pillar stability and bathroom functionality"
+        ],
+        "jobTitle": ["Corte Madera, CA - Bathroom Remodelation"],
+        "jobSubTitle": [
+          "Description of job and procedure <br/> Descroiption of jopb <br/> list the process"
+        ],
+        "firstImg": "/static/img/video-poster.jpg",
+        "secondImg": "/static/img/uncharted.jpg",
+        "thirdImg": "/static/img/uncharted.jpg",
+        "fourthImg": "/static/img/uncharted.jpg",
+        "fifthImg": "/static/img/uncharted.jpg"
+      },
+      {
+        "mainImg": ["/static/img/test.jpg"],
+        "buttonName": ["Second Gallery"],
+        "jobDescription": [
+          "Job 2<br/> Started 09/31/2019 - Completed 10/12/2019 <br/> This was a renovated pool house with minimal stability foundation that was turned into a modern pool house with pillar stability and bathroom functionality"
+        ],
+        "jobTitle": ["Larkspur, CA - House Remodelation"],
+        "jobSubTitle": [
+          "Description of job and  procedure <br/> Descroiption of jopb <br/> list the process"
+        ],
+        "firstImg": "/static/img/video-poster.jpg",
+        "secondImg": "/static/img/uncharted.jpg",
+        "thirdImg": "/static/img/uncharted.jpg",
+        "fourthImg": "/static/img/uncharted.jpg",
+        "fifthImg": "/static/img/uncharted.jpg"
+      }
+    ]
+  },
+  "contact": {
+    "reviews": [
+      {
+        "reviewImg": ["/static/img/test.jpg"],
+        "reviewCopy": ["this company is fantastic"]
+      },
+      {
+        "reviewImg": ["/static/img/test.jpg"],
+        "reviewCopy": ["this company is fantastic"]
+      }
+    ]
+  }
 }

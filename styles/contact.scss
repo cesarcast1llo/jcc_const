@@ -1,117 +1,182 @@
 .contact-page {
-   max-width: 1400px;
-   margin: 0 auto;
-   padding-top: 60px;
-   padding-bottom: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 100px;
 
-   .submit {
-   
-      .intro {
-         text-align: center;
-         font-size: 1.5rem;
-         line-height: 1;
-         font-weight: 600;
-         padding-top: 30px;
+  .submit {
+    .intro {
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 1;
+      font-weight: 600;
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+
+    .states {
+      padding: 15px 0;
+      // color: red;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-align: center;
+      height: 65px;
+      font-style: italic;
+
+      @media (min-width: $S) {
+        text-align: left;
+        font-size: 1rem;
       }
-   
-      .states {
-         padding: 15px 0;
-         // color: red;
-         font-weight: 600;
-         font-size: .9rem;
-         text-align: center;
-         height: 65px;
-         font-style: italic;
 
-         @media(min-width: $S) {
-            text-align: left;
+      .color {
+        color: green;
+        font-style: normal;
+      }
+
+      .formErrors {
+        color: black;
+
+        p {
+          margin: 0;
+          line-height: 24px;
+          display: inline-block;
+          margin-right: 5px;
+          -webkit-animation-duration: 0.5s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+          -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
+          animation-duration: 0.5s;
+
+          span:nth-child(2) {
+            color: red;
+          }
+        }
+      }
+    }
+
+    .form {
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+      max-width: 900px;
+
+      .input-copy {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+
+        .form-control {
+          font-size: 0.8rem;
+          padding: 0.2rem;
+        }
+
+        .has-error {
+          border-color: #a94442;
+        }
+      }
+    }
+
+    .button-row {
+      text-align: center;
+      @media (min-width: $S) {
+        padding-top: 10px;
+      }
+
+      .submitbtn {
+        animation-duration: 2s;
+        animation-delay: 1s;
+        background-color: red;
+        color: white;
+        border: 0;
+
+        padding: 10px 30px;
+      }
+
+      .submitbtn:disabled {
+        opacity: 0.5;
+      }
+    }
+    .sweet-alert {
+      padding: 5px;
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .lead {
+        font-size: 1.2rem;
+      }
+
+      .btn {
+        display: none !important;
+      }
+    }
+  }
+
+  .review-carousel {
+    padding-top: 60px;
+
+    .carousel-indicators {
+      display: $displayNoneDT;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      display: $displayNoneDT;
+    }
+
+    .carousel-inner {
+      .carousel-reviews {
+        height: 275px;
+        background: gray;
+        @media (min-width: 360px) {
+          height: 225px;
+        }
+        @media (min-width: $mobile) {
+          height: 265px;
+        }
+        @media (min-width: $S) {
+          height: 300px;
+        }
+        @media (min-width: $M) {
+          height: 250px;
+        }
+
+        .review-copy {
+          position: static;
+          padding: 0;
+          display: block !important;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+          @media (min-width: $L) {
+            padding: 0 60px;
+          }
+
+          h3 {
+            color: red;
             font-size: 1rem;
-         }
-          
-         .color {
-            color: green;
-            font-style: normal;
-         }
-
-         .formErrors {
-            color: black;
-
-            p {
-               margin: 0;
-               line-height: 24px;
-               display: inline-block;
-               margin-right: 5px;
-               -webkit-animation-duration: .5s;
-               -webkit-animation-fill-mode: both;
-               animation-fill-mode: both;
-               -webkit-animation-name: zoomIn;
-               animation-name: zoomIn;
-               animation-duration: .5s;
-
-               span:nth-child(2) {
-                  color: red;
-                }
+            @media (min-width: $mobile) {
+              font-size: 1.25rem;
             }
-         }
-      }
-   
-      .form {
-         margin: 0 auto;
-         width: 100%;
-         height: auto;
-         max-width: 900px;
-   
-         .input-copy {
-            font-size: 1rem;
-            margin-bottom: .5rem;
-   
-            .form-control {
-               font-size: .8rem;
-               padding: .2rem;
+            @media (min-width: $S) {
+              font-size: 1.6rem;
             }
-   
-            .has-error {
-   
-               border-color: #a94442;
+          }
+
+          p {
+            color: blue;
+            font-size: 1.35rem;
+            @media (min-width: $mobile) {
+              font-size: 1.5rem;
             }
-         }
+            @media (min-width: $S) {
+              font-size: 1.75rem;
+            }
+          }
+        }
       }
-   
-      .button-row {
-         text-align: center;
-         @media(min-width: $S) {
-            padding-top: 10px;
-         }
-   
-         .submitbtn {
-            animation-duration: 2s;
-            animation-delay: 1s;
-            background-color: red;
-            color: white;
-            border: 0;
-   
-            padding: 10px 30px;
-         }
-   
-         .submitbtn:disabled {
-            opacity: .5;
-         }
-      }
-      .sweet-alert {
-         padding: 5px;
-         
-         h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-         }
-   
-         .lead {
-            font-size: 1.2rem;
-         }
-   
-         .btn {
-            display: none !important;
-         }
-      }
-   }
+    }
+  }
 }

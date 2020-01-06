@@ -1,5 +1,5 @@
-HTML,
-BODY {
+html,
+body {
   overflow-x: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,14 +26,17 @@ $mobile: 480px;
 
 // display: none @ 480px
 .em_hide480 {
-  @media(max-width: $mobile) {
+  @media (max-width: $mobile) {
     display: none !important;
   }
 }
 
+$displayNoneDT: none !important;
+$displayNoneMB: block !important;
+
 .em_hide {
   display: none !important;
-  @media(min-width: $S) {
+  @media (min-width: $S) {
     display: block !important;
   }
 }
