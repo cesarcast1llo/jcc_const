@@ -19,25 +19,18 @@ export default class Index extends Component {
     this.state = {
       name: props.initialName || ``
     };
-    this.reset = this.reset.bind(this);
   }
 
   delHeader = () => {
     this.setState({ name: `visited` });
   };
 
-  reset() {
-    this.setState({ name: `` });
-    document.cookie = `name=; path=/;`;
-    document.cookie = `visited=; path=/;`;
-  }
-
   componentDidMount() {
     setTimeout(() => {
       this.setState(prevState => ({
         name: `visited`
       }));
-    }, 6000);
+    }, 8000);
   }
 
   render() {

@@ -166,8 +166,8 @@ $animate: all 0.2s ease-in-out;
     opacity: 1;
     visibility: visible;
     // background-color: rgba(92, 91, 87, 0.9);
-    -webkit-transition: opacity 600ms, visibility 600ms;
-    transition: opacity 600ms, visibility 600ms;
+    -webkit-transition: opacity 500ms, visibility 500ms;
+    transition: opacity 500ms, visibility 500ms;
 
     @keyframes opacity {
       0% {
@@ -182,12 +182,22 @@ $animate: all 0.2s ease-in-out;
     }
   }
 
+  .yes {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .no {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   .fadeOut {
     opacity: 0;
     visibility: hidden;
     // background-color: rgba(92, 91, 87, 0.9);
-    -webkit-transition: opacity 600ms, visibility 600ms;
-    transition: opacity 600ms, visibility 600ms;
+    -webkit-transition: opacity 500ms, visibility 500ms;
+    transition: opacity 500ms, visibility 500ms;
 
     @keyframes opacity {
       0% {

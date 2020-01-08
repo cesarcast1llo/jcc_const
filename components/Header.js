@@ -17,55 +17,53 @@ import HamBurg from './HamBurg';
 
 const Header = ({ router }) => {
   const scrollPos = useScrollPosition();
+  const hh = scrollPos;
+
   if (typeof window === 'undefined') {
     global.window = {};
   }
   let width = window.innerWidth;
-  let classAction = '';
+  let headerHeight = '';
+  let classAction = 'no';
   let headerPosition = '';
   let hamburgAction = '';
   let logoAction = '';
 
   if (router.pathname === '/') {
+    console.log(hh);
+    headerHeight = '0';
     if (width < 768) {
-      if (scrollPos > 990) {
-        classAction = 'fadeIn';
+      if (hh > 990) {
+        classAction = 'yes';
       } else {
-        classAction = 'fadeOut';
+        classAction = 'no';
       }
     } else {
-      if (scrollPos > 730) {
-        classAction = 'fadeIn';
+      if (hh < 730) {
+        classAction = 'no';
+        console.log(classAction);
       } else {
-        classAction = 'fadeOut';
+        classAction = 'yes';
+        console.log(classAction);
       }
     }
+    // if refresh mid page, problems with client & server classes
   } else {
     null;
   }
 
-  // router.pathname === '/'
-  //   ? width > 768
-  //     ? scrollPos > 990
-  //       ? (classAction = 'fadeIn')
-  //       : (classAction = 'fadeOut')
-  //     : scrollPos > 730
-  //     ? (classAction = 'fadeIn')
-  //     : (classAction = 'fadeOut')
-  //   : null;
-
   if (router.pathname === '/portfolio' || router.pathname === '/about') {
     if (width < 768) {
-      if (scrollPos > 55) {
-        headerPosition = 'fixed';
-      } else {
+      if (scrollPos < 55) {
         headerPosition = 'absolute';
+      } else {
+        headerPosition = 'fixed';
       }
     } else {
-      if (scrollPos > 75) {
-        headerPosition = 'fixed';
-      } else {
+      if (scrollPos < 75) {
         headerPosition = 'absolute';
+      } else {
+        headerPosition = 'fixed';
       }
     }
   } else {
@@ -73,7 +71,7 @@ const Header = ({ router }) => {
   }
 
   return (
-    <div className={`header container`}>
+    <div className={`header container`} style={{ height: `${headerHeight}` }}>
       <Navbar
         className={`nav-bar fixed-top ${classAction}`}
         style={{ position: `${headerPosition}` }}
@@ -84,6 +82,8 @@ const Header = ({ router }) => {
         <div className={`nav-wrapper ${hamburgAction}`}>
           <HamBurg />
         </div>
+        {hh}
+        {classAction}
       </Navbar>
     </div>
   );
