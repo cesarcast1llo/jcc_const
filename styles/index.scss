@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 .index-page {
+  max-width: 1400px;
+
   .acqua {
     background: linear-gradient(to bottom, #262626, #ffffff);
     color: white;
@@ -30,7 +32,6 @@
   }
 
   .index-component {
-    max-width: 1400px;
     margin: 0 auto;
     height: 800px;
   }

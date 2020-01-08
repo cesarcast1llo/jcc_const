@@ -28,6 +28,27 @@ export default function About() {
       {console.log((frindz = [...frindz, woody.name]))}
       <div className="about-page" style={{ margin: '0 auto' }}>
         <h1>This is the about page</h1>
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1> <h1>This is the about page</h1>{' '}
+        <h1>This is the about page</h1>
         {/* { console.log('%c frindz', 'color: orange;font-size: 40px;font-weight: 700;') }
           { console.table([foo,nar, buzz]) } */}
       </div>
