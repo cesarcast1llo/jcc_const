@@ -10,23 +10,25 @@ class Contact extends Component {
   render() {
     return (
       <React.Fragment>
-        <Header />
         <HeadMeta
           title="Contact"
           description="filled in with description of page"
           keywords="keywords for google stuff"
         />
+        <Header />
         <div className="contact-page">
-          <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={300}>
-            <SubmitForm />
-            {/* <Container className="submit">
+          <div className="container contact-container">
+            <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={300}>
+              <SubmitForm />
+              {/* <Container className="submit">
               <Row>
                 <Col className="intro"> */}
-            <ReviewStars />
-            {/* </Col>
+              <ReviewStars />
+              {/* </Col>
               </Row>
             </Container> */}
-          </ScrollAnimation>
+            </ScrollAnimation>
+          </div>
         </div>
         <Footer />
       </React.Fragment>

@@ -35,55 +35,60 @@ export default class Index extends Component {
 
   render() {
     return (
-      <div className="index-page">
+      <React.Fragment>
+        <HeadMeta
+          title="Welcome"
+          description="JCC Construction"
+          keywords="keywords for google stuff"
+        />
+        <Header />
         {this.state.name === `` ? (
           <IndexOverlay />
         ) : (
-          <React.Fragment>
-            <HeadMeta
-              title="Welcome"
-              description="JCC Construction"
-              keywords="keywords for google stuff"
-            />
-            <Header />
-            <div className="parallax"></div>
-            <IndexComponent bgcolor="acqua" animateIn="rotateInUpLeft">
-              change prop to props so slide can manage the animation when header
-              fades in after parallax, make sure its transparent like portfolio
-              page
-              <h1>This is the index page</h1>
-              <h1>This is the index page</h1>
-              <h1>This is the index page</h1>
-              <h1>This is the index page</h1>
-            </IndexComponent>
-            <IndexComponent bgcolor="asda" animateIn="rotateInUpRight">
-              <h1>This is the index page</h1>
-              <h1>This is the index page</h1>
-              <h1>This is the index page</h1>
-              <h1>This is the index page</h1>
-            </IndexComponent>
-            <IndexComponent bgcolor="acqua" animateIn="rotateInUpLeft">
-              <h1>This is the index page</h1>
-              <h1>This is the index page</h1>
-              <h1>This is the index page</h1>
-              <h1>This is the index page</h1>
-            </IndexComponent>
-            <IndexComponent bgcolor="asda" animateIn="rotateInUpRight">
-              <h1>This is the index page</h1>
-              <h1>This is the index page</h1>
-              <h1>This is the index page</h1>
-              <h1>This is the index page</h1>
-            </IndexComponent>
-            <IndexComponent bgcolor="asda" animateIn="fadeIn" delay={500}>
-              <h1>This is the index page</h1>
-              <h1>This is the index page</h1>
-              <h1>This is the index page</h1>
-              <h1>This is the index page</h1>
-            </IndexComponent>
-            <Footer />
-          </React.Fragment>
+          <div className="index-page">
+            <img className="parallax" />
+            <div className="container index-container">
+              <IndexComponent bgcolor="acqua" animateIn="rotateInUpLeft">
+                make inside of content be 1400px max-width, the rest bleed out
+                like /portfolio page
+                <br />
+                change prop to props so slide can manage the animation when
+                header fades in after parallax, make sure its transparent like
+                portfolio page
+                <h1>This is the index page</h1>
+                <h1>This is the index page</h1>
+                <h1>This is the index page</h1>
+                <h1>This is the index page</h1>
+              </IndexComponent>
+              <IndexComponent bgcolor="asda" animateIn="rotateInUpRight">
+                <h1>This is the index page</h1>
+                <h1>This is the index page</h1>
+                <h1>This is the index page</h1>
+                <h1>This is the index page</h1>
+              </IndexComponent>
+              <IndexComponent bgcolor="acqua" animateIn="rotateInUpLeft">
+                <h1>This is the index page</h1>
+                <h1>This is the index page</h1>
+                <h1>This is the index page</h1>
+                <h1>This is the index page</h1>
+              </IndexComponent>
+              <IndexComponent bgcolor="asda" animateIn="rotateInUpRight">
+                <h1>This is the index page</h1>
+                <h1>This is the index page</h1>
+                <h1>This is the index page</h1>
+                <h1>This is the index page</h1>
+              </IndexComponent>
+              <IndexComponent bgcolor="asda" animateIn="fadeIn" delay={500}>
+                <h1>This is the index page</h1>
+                <h1>This is the index page</h1>
+                <h1>This is the index page</h1>
+                <h1>This is the index page</h1>
+              </IndexComponent>
+            </div>
+          </div>
         )}
-      </div>
+        <Footer />
+      </React.Fragment>
     );
   }
 }

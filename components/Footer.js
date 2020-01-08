@@ -3,7 +3,7 @@ import '../styles/websitename.scss';
 
 const Footer = () => (
   <div className="footer">
-    <div className="container footer-nav">
+    <div className="container footer-container">
       <div className="row">
         <div className="col-2 logo-container">
           <img

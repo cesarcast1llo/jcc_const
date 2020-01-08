@@ -1,8 +1,9 @@
 .footer {
   background-color: black;
   z-index: 20;
+  max-width: 2000px;
 
-  .footer-nav {
+  .footer-container {
     padding: 1.5rem 1rem 2.5rem;
     margin: 0 auto;
     color: red;

@@ -9,13 +9,14 @@ import '../styles/websitename.scss';
 
 export default function Porftolio() {
   return (
-    <div>
-      <Header />
+    <React.Fragment>
       <HeadMeta
-        title="Porftolio"
-        description="add description of page for SEO"
+        title="Contact"
+        description="filled in with description of page"
         keywords="keywords for google stuff"
       />
+      <Header />
+
       <div className="portfolio-page">
         <div className="container portfolio-container">
           <div className="row">
@@ -234,6 +235,6 @@ export default function Porftolio() {
         </div>
       </div>
       <Footer />
-    </div>
+    </React.Fragment>
   );
 }

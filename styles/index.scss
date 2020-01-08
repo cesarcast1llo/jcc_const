@@ -1,28 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 .index-page {
-  max-width: 1400px;
-
-  .acqua {
-    background: linear-gradient(to bottom, #262626, #ffffff);
-    color: white;
-    text-align: left;
-    // for now
-  }
-
-  .black {
-    background: linear-gradient(to bottom, #ffffff, #262626);
-    color: black;
-    text-align: right;
-    // for now
-  }
+  margin: 0 auto;
+  max-width: 2000px;
 
   .parallax {
-    background-image: url('/static/img/dog.gif');
+    width: 100%;
+    src: url('/static/img/dog.gif');
     min-height: 90vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
 
     @media (min-width: $S) {
       background-attachment: fixed;
@@ -31,87 +19,105 @@
     }
   }
 
-  .index-component {
-    margin: 0 auto;
-    height: 800px;
-  }
+  .index-container {
+    max-width: 1400px;
 
-  .blackout {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.998);
-    margin-top: 40px;
-
-    @media (min-width: $S) {
-      display: flex;
-
-      justify-content: center;
+    .acqua {
+      background: linear-gradient(to bottom, #262626, #ffffff);
+      color: white;
+      text-align: left;
+      // for now
     }
 
-    .loading-text {
-      padding-top: 20%;
-      text-align: center;
-      font-family: 'Montserrat';
-      display: block;
-      overflow: hidden;
-      white-space: nowrap;
-      font-size: 3rem;
-      background-image: url('https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif');
-      // -moz-background-clip: text;
-      // -webkit-background-clip: text;
-      background-size: cover;
-      color: transparent;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+    .black {
+      background: linear-gradient(to bottom, #ffffff, #262626);
+      color: black;
+      text-align: right;
+      // for now
+    }
 
-      @media (min-width: $mobile) {
-        font-size: 4rem;
-      }
+    .index-component {
+      margin: 0 auto;
+      height: 800px;
+    }
+
+    .blackout {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.998);
+      margin-top: 40px;
 
       @media (min-width: $S) {
-        font-size: 4rem;
-        display: inline-block;
+        display: flex;
+
+        justify-content: center;
       }
 
-      @media (min-width: $M) {
-        font-size: 4rem;
-        display: inline-block;
-      }
-    }
+      .loading-text {
+        padding-top: 20%;
+        text-align: center;
+        font-family: 'Montserrat';
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 3rem;
+        background-image: url('https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif');
+        // -moz-background-clip: text;
+        // -webkit-background-clip: text;
+        background-size: cover;
+        color: transparent;
+        letter-spacing: 1px;
+        text-transform: uppercase;
 
-    #jc.loading-text {
-      animation: fadeIn 3s;
-    }
+        @media (min-width: $mobile) {
+          font-size: 4rem;
+        }
 
-    #const.loading-text {
-      animation: slidein 3s;
-    }
+        @media (min-width: $S) {
+          font-size: 4rem;
+          display: inline-block;
+        }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
+        @media (min-width: $M) {
+          font-size: 4rem;
+          display: inline-block;
+        }
       }
-      to {
-        opacity: 1;
-      }
-    }
 
-    @keyframes slidein {
-      0% {
-        margin-left: -17000px;
+      #jc.loading-text {
+        animation: fadeIn 3s;
       }
-      20% {
-        margin-left: -17000px;
+
+      #const.loading-text {
+        animation: slidein 3s;
       }
-      35% {
-        margin-left: -17000px;
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
-      100% {
-        margin-left: 0px;
+
+      @keyframes slidein {
+        0% {
+          margin-left: -17000px;
+        }
+        20% {
+          margin-left: -17000px;
+        }
+        35% {
+          margin-left: -17000px;
+        }
+        100% {
+          margin-left: 0px;
+        }
       }
     }
   }
