@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const useScrollPosition = () => {
-   if (typeof window === 'undefined') {
-      global.window = {}
+  if (typeof window === 'undefined') {
+    global.window = {};
   }
 
   const [scrollPos, setScrollPos] = useState(window.pageYOffset);
@@ -12,9 +12,9 @@ const useScrollPosition = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener('scroll', onScroll);
     return () => {
-      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener('scroll', onScroll);
     };
   });
 
@@ -30,20 +30,20 @@ export default useScrollPosition;
 //      height
 //    };
 //  }
- 
+
 //  export default function useWindowDimensions() {
 //    const [windowDimensions, setWindowDimensions] = useState(
 //      getWindowDimensions()
 //    );
- 
+
 //    useEffect(() => {
 //      function handleResize() {
 //        setWindowDimensions(getWindowDimensions());
 //      }
- 
+
 //      window.addEventListener("resize", handleResize);
 //      return () => window.removeEventListener("resize", handleResize);
 //    }, []);
- 
+
 //    return windowDimensions;
 //  }

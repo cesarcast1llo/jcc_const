@@ -1,16 +1,5 @@
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
-} from 'reactstrap';
+import Link from 'next/link';
+import { Navbar, NavbarBrand } from 'reactstrap';
 import useScrollPosition from '../hooks/useScrollPosition.js';
 import { withRouter } from 'next/router';
 import HamBurg from './HamBurg';
@@ -24,7 +13,7 @@ const Header = ({ router }) => {
   }
   let width = window.innerWidth;
   let headerHeight = '';
-  let classAction = 'no';
+  let classAction = '';
   let headerPosition = '';
   let hamburgAction = '';
   let logoAction = '';
@@ -47,28 +36,34 @@ const Header = ({ router }) => {
         console.log(classAction);
       }
     }
-    // if refresh mid page, problems with client & server classes
   } else {
     null;
   }
 
   if (router.pathname === '/portfolio' || router.pathname === '/about') {
+    console.log(hh);
+    // console.log(hh + ' is greater than 90 so it should be fixed');
     if (width < 768) {
-      if (scrollPos < 55) {
+      if (scrollPos < 70) {
         headerPosition = 'absolute';
+        // console.log(headerPosition);
       } else {
         headerPosition = 'fixed';
       }
     } else {
-      if (scrollPos < 75) {
+      if (scrollPos < 90) {
         headerPosition = 'absolute';
-      } else {
+        console.log(hh + ' is less than 90 so it should be absolute');
+      } else if (scrollPos > 90) {
         headerPosition = 'fixed';
+        console.log(hh + ' is greater than 90 so it should be fixed');
       }
     }
   } else {
     null;
   }
+  // for both portfolio & index page, need to create function that runs and gets correct height
+  // for now it's working only because it falls back on the class, 'else', need it to properly work
 
   return (
     <div className={`header container`} style={{ height: `${headerHeight}` }}>
@@ -77,13 +72,13 @@ const Header = ({ router }) => {
         style={{ position: `${headerPosition}` }}
       >
         <NavbarBrand className={`image-wrapper animated bounceInleft`}>
-          <img className="logo-img" src="../static/img/jcc.png" alt="JCC" />
+          <Link href="/">
+            <img className="logo-img" src="../static/img/jcc.png" alt="JCC" />
+          </Link>
         </NavbarBrand>
         <div className={`nav-wrapper ${hamburgAction}`}>
           <HamBurg />
         </div>
-        {hh}
-        {classAction}
       </Navbar>
     </div>
   );

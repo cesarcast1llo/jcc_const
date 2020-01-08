@@ -1,53 +1,47 @@
 // $icons: .carousel-control-next-icon
 
 .marquee {
-	max-width: 1920px;
-   width: 100%;
-	margin: 0 auto;
-   // background: linear-gradient(to bottom, rgb(255, 0, 0), #00ccff);
-   // font-size: 50px;
-   // text-align: center;
-   padding: 0 0 30px;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  // background: linear-gradient(to bottom, rgb(255, 0, 0), #00ccff);
+  // font-size: 50px;
+  // text-align: center;
+  padding: 0 0 30px;
 
-   .carousel {
+  .carousel {
+    .carousel-indicators {
+      margin: 0 auto;
 
-      .carousel-indicators {
-         margin: 0 auto;
+      li {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+        border-radius: 50%;
+        background-color: #555;
+      }
+    }
 
-         li {
-            width: 16px;
-            height: 16px;
-            margin-right: 5px;
-            border-radius: 50%;
-            background-color: #555;
-         }
+    .carousel-inner {
+      .carousel-item {
       }
 
-      .carousel-inner {
-
-         .carousel-item {
-
-         }
-
-         img {
-            width: 100%;
-            height: auto;
-            max-height: 600px;
-         }
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 600px;
       }
+    }
 
-      .carousel-control-prev {
-
-         .carousel-control-prev-icon {
-            display: none !important;
-         }
+    .carousel-control-prev {
+      .carousel-control-prev-icon {
+        display: none !important;
       }
-      .carousel-control-next {
-
-         .carousel-control-next-icon {
-            display: none !important;
-         }
+    }
+    .carousel-control-next {
+      .carousel-control-next-icon {
+        display: none !important;
       }
-
-   }
+    }
+  }
 }
