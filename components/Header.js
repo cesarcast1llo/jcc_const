@@ -5,6 +5,8 @@ import { withRouter } from 'next/router';
 import HamBurg from './HamBurg';
 
 const Header = ({ router }) => {
+  // let loc = window.location.pathname;
+
   const scrollPos = useScrollPosition();
   const hh = scrollPos;
 

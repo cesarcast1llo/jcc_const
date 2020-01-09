@@ -5,6 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Footer from '../components/Footer';
 import SubmitForm from '../components/SubmitForm';
 import ReviewStars from '../components/ReviewStars';
+import Data from './data.json';
 
 class Contact extends Component {
   render() {
@@ -23,7 +24,7 @@ class Contact extends Component {
               {/* <Container className="submit">
               <Row>
                 <Col className="intro"> */}
-              <ReviewStars />
+              <ReviewStars quote={Data.contact.reviews[0].quote} />
               {/* </Col>
               </Row>
             </Container> */}

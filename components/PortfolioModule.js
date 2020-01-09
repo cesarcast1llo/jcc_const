@@ -1,14 +1,8 @@
-import Carousel from 'react-bootstrap/Carousel';
 import ScrollAnimation from 'react-animate-on-scroll';
+import Carousel from './Carousel';
+import Data from '../pages/data.json';
 
 const PortfolioImages = props => {
-  // let slide;
-  // if (props.slide === 'left') {
-  // 	slide = 'animated bounceInLeft'
-  // }
-  // if (props.slide === 'right') {
-  // 	slide = 'animated bounceInRight'
-  // }
   return (
     <div className="portfolio-modal">
       <ScrollAnimation animateIn={props.animate} animateOnce={true}>
@@ -44,43 +38,7 @@ const PortfolioImages = props => {
         <div className="modal-dialog modal-dialog-centered" role="document">
           <div className="modal-content">
             <div className="modal-body">
-              <Carousel pauseonhover="true" interval="4000">
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src={props.firstImg}
-                    alt={props.imgsAlt}
-                  />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src={props.secondImg}
-                    alt={props.imgsAlt}
-                  />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src={props.thirdImg}
-                    alt={props.imgsAlt}
-                  />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src={props.fourthImg}
-                    alt={props.imgsAlt}
-                  />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src={props.fifthImg}
-                    alt={props.imgsAlt}
-                  />
-                </Carousel.Item>
-              </Carousel>
+              <Carousel />
               <div className="container">
                 <div className="row">
                   <div className="col-12 gallery-description">
