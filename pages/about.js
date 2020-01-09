@@ -15,16 +15,6 @@ export default function About() {
 
   return (
     <React.Fragment>
-      {/* Google Tag Manager (noscript) */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-5LPFKW7"
-          height="0"
-          width="0"
-          style="display:none;visibility:hidden"
-        ></iframe>
-      </noscript>
-      {/* End Google Tag Manager (noscript) */}
       <HeadMeta
         title="About Page"
         description="filled in with description of page"
