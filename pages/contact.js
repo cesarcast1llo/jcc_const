@@ -4,7 +4,7 @@ import HeadMeta from '../components/HeadMeta';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Footer from '../components/Footer';
 import SubmitForm from '../components/SubmitForm';
-import ReviewStars from '../components/ReviewStars';
+import Carousel from '../components/Carousel';
 import Data from './data.json';
 
 class Contact extends Component {
@@ -24,7 +24,7 @@ class Contact extends Component {
               {/* <Container className="submit">
               <Row>
                 <Col className="intro"> */}
-              <ReviewStars quote={Data.contact.reviews[0].quote} />
+              <Carousel />
               {/* </Col>
               </Row>
             </Container> */}
