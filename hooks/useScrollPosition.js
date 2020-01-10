@@ -12,6 +12,7 @@ const useScrollPosition = () => {
   };
 
   useEffect(() => {
+    window.addEventListener('load', onScroll);
     window.addEventListener('scroll', onScroll);
     return () => {
       window.removeEventListener('scroll', onScroll);

@@ -21,16 +21,12 @@ export default class Index extends Component {
     };
   }
 
-  delHeader = () => {
-    this.setState({ name: `visited` });
-  };
-
   componentDidMount() {
     setTimeout(() => {
       this.setState(prevState => ({
         name: `visited`
       }));
-    }, 8000);
+    }, 800000);
   }
 
   render() {

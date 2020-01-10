@@ -40,85 +40,83 @@
       margin: 0 auto;
       height: 800px;
     }
+  }
+}
+.blackout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.998);
 
-    .blackout {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.998);
-      margin-top: 40px;
+  @media (min-width: $S) {
+    display: flex;
 
-      @media (min-width: $S) {
-        display: flex;
+    justify-content: center;
+  }
 
-        justify-content: center;
-      }
+  .loading-text {
+    padding-top: 20%;
+    text-align: center;
+    font-family: 'Montserrat';
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 3rem;
+    background-image: url('https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif');
+    // -moz-background-clip: text;
+    // -webkit-background-clip: text;
+    background-size: cover;
+    color: transparent;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 
-      .loading-text {
-        padding-top: 20%;
-        text-align: center;
-        font-family: 'Montserrat';
-        display: block;
-        overflow: hidden;
-        white-space: nowrap;
-        font-size: 3rem;
-        background-image: url('https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif');
-        // -moz-background-clip: text;
-        // -webkit-background-clip: text;
-        background-size: cover;
-        color: transparent;
-        letter-spacing: 1px;
-        text-transform: uppercase;
+    @media (min-width: $mobile) {
+      font-size: 4rem;
+    }
 
-        @media (min-width: $mobile) {
-          font-size: 4rem;
-        }
+    @media (min-width: $S) {
+      font-size: 4rem;
+      display: inline-block;
+    }
 
-        @media (min-width: $S) {
-          font-size: 4rem;
-          display: inline-block;
-        }
+    @media (min-width: $M) {
+      font-size: 4rem;
+      display: inline-block;
+    }
+  }
 
-        @media (min-width: $M) {
-          font-size: 4rem;
-          display: inline-block;
-        }
-      }
+  #jc.loading-text {
+    animation: fadeIn 3s;
+  }
 
-      #jc.loading-text {
-        animation: fadeIn 3s;
-      }
+  #const.loading-text {
+    animation: slidein 3s;
+  }
 
-      #const.loading-text {
-        animation: slidein 3s;
-      }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      @keyframes slidein {
-        0% {
-          margin-left: -17000px;
-        }
-        20% {
-          margin-left: -17000px;
-        }
-        35% {
-          margin-left: -17000px;
-        }
-        100% {
-          margin-left: 0px;
-        }
-      }
+  @keyframes slidein {
+    0% {
+      margin-left: -17000px;
+    }
+    20% {
+      margin-left: -17000px;
+    }
+    35% {
+      margin-left: -17000px;
+    }
+    100% {
+      margin-left: 0px;
     }
   }
 }

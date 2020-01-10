@@ -21,7 +21,7 @@ const Header = ({ router }) => {
   let logoAction = '';
 
   if (router.pathname === '/') {
-    console.log(scrollPos);
+    // console.log(scrollPos);
     headerHeight = '0';
     if (width < 768) {
       if (scrollPos > 990) {
@@ -33,16 +33,18 @@ const Header = ({ router }) => {
       if (scrollPos < 730) {
         classAction = 'notVisible';
         console.log(
-          scrollPos +
-            ' is less than 730 so it should be .notVisible className is ' +
+          'CLIENT scrollPos: ' +
+            scrollPos +
+            ' is less than 730 so it should be .notVisible = ' +
             classAction
         );
       }
       if (scrollPos > 730) {
         classAction = 'visible';
         console.log(
-          scrollPos +
-            ' is more than 730 so it should be .notVisible className is ' +
+          'CLIENT scrollPos: ' +
+            scrollPos +
+            ' is more than 730 so it should be Visible = ' +
             classAction
         );
       }
@@ -73,6 +75,7 @@ const Header = ({ router }) => {
 
   return (
     <div className="header">
+      {console.log('SERVER scrollPos: ' + scrollPos + ' class? ' + classAction)}
       <div
         className={`header-container container`}
         style={{ height: `${headerHeight}` }}
