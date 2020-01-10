@@ -130,31 +130,27 @@ class SubmitForm extends Component {
         </Row>
         <Form className="form" method="POST" action="sent">
           <div className="states">
-            {this.state.emailValid ? '' : this.state.openMessage}
+            {formValid ? '' : this.state.openMessage}
 
-            {this.state.formValid ? (
+            {formValid ? (
               <div className="color">
                 Email, Phone Number, and&nbsp;Message&nbsp;All&nbsp;Correct.
               </div>
             ) : (
               <FormErrors
-                className="animate shake"
+                className="error"
                 formErrors={this.state.formErrors}
-              />
+              ></FormErrors>
             )}
           </div>
-          <FormGroup className="form-group">
-            <Label for="exampleName" for="validationCustom01">
-              Name
-            </Label>
+          <FormGroup>
+            <Label for="exampleName">Name</Label>
             <Input type="name" name="name" id="name" />
           </FormGroup>
           <Row>
-            <Col xs={12} sm={6} className="emailphone">
+            <Col xs={12} sm={6} className="validation-fields">
               <FormGroup
-                className={`form-group ${this.errorClass(
-                  this.state.formErrors.email
-                )}`}
+                className={`${this.errorClass(this.state.formErrors.email)}`}
               >
                 <Label for="exampleEmail">Email</Label>
                 <Input
@@ -165,14 +161,15 @@ class SubmitForm extends Component {
                   placeholder="youremail@here.com"
                   value={this.state.email}
                   onChange={this.handleUserInput}
+                  className={`input-field ${
+                    this.state.emailValid ? 'correct' : ''
+                  }`}
                 />
               </FormGroup>
             </Col>
-            <Col xs={12} sm={6} className="emailphone">
+            <Col xs={12} sm={6} className="validation-fields">
               <FormGroup
-                className={`form-group ${this.errorClass(
-                  this.state.formErrors.number
-                )}`}
+                className={`${this.errorClass(this.state.formErrors.number)}`}
               >
                 <Label for="exampleNumber">Phone Number</Label>
                 <Input
@@ -181,14 +178,22 @@ class SubmitForm extends Component {
                   placeholder="000-000-0000"
                   value={this.state.number}
                   onChange={this.handleUserInput}
+                  className={`input-field ${
+                    this.state.numberValid ? 'correct' : ''
+                  }`}
                 />
               </FormGroup>
             </Col>
           </Row>
           <Row>
-            <Col className="last-row">
-              <FormGroup className="form-group">
-                <Label for="exampleSelectMulti">How can we help you?</Label>
+            <Col className="validation-fields">
+              <FormGroup
+                className={`${this.errorClass(this.state.formErrors.message)}`}
+              >
+                <Label for="exampleSelectMulti">
+                  How can we help you? BY FINDING HOW TO VALIDATE INPUT, TAKING
+                  OUT ERRORS WITH JUST THE KEY NOT ALL OF THE KEYS
+                </Label>
                 <Input
                   type="textarea"
                   name="message"
@@ -196,6 +201,9 @@ class SubmitForm extends Component {
                   rows="3"
                   value={this.state.message}
                   onChange={this.handleUserInput}
+                  className={`input-field ${
+                    this.state.messageValid ? 'correct' : ''
+                  }`}
                 />
               </FormGroup>
             </Col>

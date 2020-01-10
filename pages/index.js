@@ -26,7 +26,7 @@ export default class Index extends Component {
       this.setState(prevState => ({
         name: `visited`
       }));
-    }, 800000);
+    }, 8000);
   }
 
   render() {

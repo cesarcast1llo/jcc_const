@@ -32,148 +32,165 @@
         color: green;
         font-style: normal;
       }
+    }
 
-      .formErrors {
-        color: black;
-
-        p {
-          margin: 0;
-          line-height: 24px;
-          display: inline-block;
-          margin-right: 5px;
-          -webkit-animation-duration: 0.5s;
-          -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-          -webkit-animation-name: zoomIn;
-          animation-name: zoomIn;
-          animation-duration: 0.5s;
-
-          span:nth-child(2) {
-            color: red;
-          }
+    .validation-fields {
+      .form-group {
+        .input-field {
+          box-shadow: none;
+          background-color: white !important;
         }
-      }
-
-      .form {
-        margin: 0 auto;
-        width: 100%;
-        height: auto;
-        max-width: 900px;
-
-        .input-copy {
-          font-size: 1rem;
-          margin-bottom: 0.5rem;
-
-          .form-control {
-            font-size: 0.8rem;
-            padding: 0.2rem;
-          }
-
-          .has-error {
-            border-color: #a94442;
-          }
+        .correct {
+          border: 1px solid green !important;
+          box-shadow: green !important;
         }
-      }
-
-      .button-row {
-        text-align: center;
-        @media (min-width: $S) {
-          padding-top: 10px;
-        }
-
-        .submitbtn {
-          animation-duration: 2s;
-          animation-delay: 1s;
-          background-color: red;
-          color: white;
-          border: 0;
-
-          padding: 10px 30px;
-        }
-
-        .submitbtn:disabled {
-          opacity: 0.5;
-        }
-      }
-      .sweet-alert {
-        padding: 5px;
-
-        h2 {
-          font-size: 1.5rem;
-          font-weight: 700;
-        }
-
-        .lead {
-          font-size: 1.2rem;
-        }
-
-        .btn {
-          display: none !important;
+        .incorrect {
+          border: 1px solid red !important;
+          box-shadow: red !important;
         }
       }
     }
 
-    .review-carousel {
-      padding-top: 60px;
+    .formErrors {
+      color: black;
 
-      .carousel-indicators {
-        display: $displayNoneDT;
+      p {
+        margin: 0;
+        line-height: 24px;
+        display: inline-block;
+        margin-right: 5px;
+        -webkit-animation-duration: 0.5s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: zoomIn;
+        animation-name: zoomIn;
+        animation-duration: 0.5s;
+
+        span:nth-child(2) {
+          color: red;
+        }
+      }
+    }
+
+    .form {
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+      max-width: 900px;
+
+      .input-copy {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+
+        .form-control {
+          font-size: 0.8rem;
+          padding: 0.2rem;
+        }
+
+        .has-error {
+          border-color: #a94442;
+        }
+      }
+    }
+
+    .button-row {
+      text-align: center;
+      @media (min-width: $S) {
+        padding-top: 10px;
       }
 
-      .carousel-control-prev,
-      .carousel-control-next {
-        display: $displayNoneDT;
+      .submitbtn {
+        animation-duration: 2s;
+        animation-delay: 1s;
+        background-color: red;
+        color: white;
+        border: 0;
+
+        padding: 10px 30px;
       }
 
-      .carousel-inner {
-        .carousel-reviews {
-          height: 275px;
-          // background: gray;
-          @media (min-width: 360px) {
-            height: 225px;
-          }
-          @media (min-width: $mobile) {
-            height: 265px;
-          }
-          @media (min-width: $S) {
-            height: 300px;
-          }
-          @media (min-width: $M) {
-            height: 250px;
+      .submitbtn:disabled {
+        opacity: 0.5;
+      }
+    }
+    .sweet-alert {
+      padding: 5px;
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .lead {
+        font-size: 1.2rem;
+      }
+
+      .btn {
+        display: none !important;
+      }
+    }
+  }
+
+  .review-carousel {
+    padding-top: 60px;
+
+    .carousel-indicators {
+      display: $displayNoneDT;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      display: $displayNoneDT;
+    }
+
+    .carousel-inner {
+      .carousel-reviews {
+        height: 275px;
+        // background: gray;
+        @media (min-width: 360px) {
+          height: 225px;
+        }
+        @media (min-width: $mobile) {
+          height: 265px;
+        }
+        @media (min-width: $S) {
+          height: 300px;
+        }
+        @media (min-width: $M) {
+          height: 250px;
+        }
+
+        .review-copy {
+          position: static;
+          padding: 0;
+          display: block !important;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+          @media (min-width: $L) {
+            padding: 0 60px;
           }
 
-          .review-copy {
-            position: static;
-            padding: 0;
-            display: block !important;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 1;
-            @media (min-width: $L) {
-              padding: 0 60px;
+          h3 {
+            color: red;
+            font-size: 1rem;
+            @media (min-width: $mobile) {
+              font-size: 1.25rem;
             }
-
-            h3 {
-              color: red;
-              font-size: 1rem;
-              @media (min-width: $mobile) {
-                font-size: 1.25rem;
-              }
-              @media (min-width: $S) {
-                font-size: 1.6rem;
-              }
+            @media (min-width: $S) {
+              font-size: 1.6rem;
             }
+          }
 
-            p {
-              color: blue;
-              font-size: 1.35rem;
-              @media (min-width: $mobile) {
-                font-size: 1.5rem;
-              }
-              @media (min-width: $S) {
-                font-size: 1.75rem;
-              }
+          p {
+            color: blue;
+            font-size: 1.35rem;
+            @media (min-width: $mobile) {
+              font-size: 1.5rem;
+            }
+            @media (min-width: $S) {
+              font-size: 1.75rem;
             }
           }
         }
