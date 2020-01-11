@@ -21,7 +21,6 @@
       font-size: 0.9rem;
       text-align: center;
       height: 65px;
-      font-style: italic;
 
       @media (min-width: $S) {
         text-align: left;
@@ -38,15 +37,24 @@
       .form-group {
         .input-field {
           box-shadow: none;
-          background-color: white !important;
+          background-color: inherit !important;
         }
         .correct {
-          border: 1px solid green !important;
+          border: 1.4px solid green !important;
           box-shadow: green !important;
         }
-        .incorrect {
-          border: 1px solid red !important;
-          box-shadow: red !important;
+        .input-correct {
+          color: red;
+          display: inline-block;
+          text-decoration: line-through;
+
+          span {
+            color: black;
+          }
+        }
+        .input-incorrect {
+          color: red;
+          display: inline-block;
         }
       }
     }

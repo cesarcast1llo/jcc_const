@@ -61,7 +61,7 @@ class SubmitForm extends Component {
         );
         fieldValidationErrors.Message = messageValid
           ? 'is valid.'
-          : 'at least 15 characters.';
+          : 'Message has to have at least 15 characters';
         break;
       default:
         break;
@@ -130,17 +130,12 @@ class SubmitForm extends Component {
         </Row>
         <Form className="form" method="POST" action="sent">
           <div className="states">
-            {formValid ? '' : this.state.openMessage}
-
             {formValid ? (
               <div className="color">
                 Email, Phone Number, and&nbsp;Message&nbsp;All&nbsp;Correct.
               </div>
             ) : (
-              <FormErrors
-                className="error"
-                formErrors={this.state.formErrors}
-              ></FormErrors>
+              this.state.openMessage
             )}
           </div>
           <FormGroup>
@@ -152,7 +147,14 @@ class SubmitForm extends Component {
               <FormGroup
                 className={`${this.errorClass(this.state.formErrors.email)}`}
               >
-                <Label for="exampleEmail">Email</Label>
+                <Label for="exampleEmail">
+                  Email{' '}
+                  {this.state.emailValid ? null : (
+                    <div className="input-incorrect">
+                      {this.state.formErrors.Email}
+                    </div>
+                  )}
+                </Label>
                 <Input
                   type="email"
                   required
@@ -171,7 +173,14 @@ class SubmitForm extends Component {
               <FormGroup
                 className={`${this.errorClass(this.state.formErrors.number)}`}
               >
-                <Label for="exampleNumber">Phone Number</Label>
+                <Label for="exampleNumber">
+                  Phone Number{' '}
+                  {this.state.numberValid ? null : (
+                    <div className="input-incorrect">
+                      {this.state.formErrors.Number}
+                    </div>
+                  )}
+                </Label>
                 <Input
                   name="number"
                   id="number"
@@ -191,8 +200,12 @@ class SubmitForm extends Component {
                 className={`${this.errorClass(this.state.formErrors.message)}`}
               >
                 <Label for="exampleSelectMulti">
-                  How can we help you? BY FINDING HOW TO VALIDATE INPUT, TAKING
-                  OUT ERRORS WITH JUST THE KEY NOT ALL OF THE KEYS
+                  How can we help you?{' '}
+                  {this.state.messageValid ? null : (
+                    <div className="input-incorrect">
+                      {this.state.formErrors.Message}
+                    </div>
+                  )}
                 </Label>
                 <Input
                   type="textarea"
@@ -210,6 +223,7 @@ class SubmitForm extends Component {
           </Row>
           <Row>
             <Col className="button-row">
+              formValid ? in button slide over green color and activate
               <Button
                 className={`submitbtn ${formValid ? 'animated shake' : ''}`}
                 type="submit"
@@ -223,6 +237,7 @@ class SubmitForm extends Component {
           </Row>
         </Form>
         {this.state.alert}
+        {/* activates popup, dont delete */}
       </Container>
     );
   }

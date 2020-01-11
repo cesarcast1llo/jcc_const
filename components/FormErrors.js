@@ -6,7 +6,9 @@ export const FormErrors = ({ formErrors }) => (
       if (formErrors[fieldName].length > 0) {
         return (
           <p key={i}>
-            <span>{fieldName}</span> <span>{formErrors[fieldName]}</span>
+            <span>
+              {fieldName} {formErrors[fieldName]}
+            </span>
           </p>
         );
       } else {
@@ -15,3 +17,8 @@ export const FormErrors = ({ formErrors }) => (
     })}
   </div>
 );
+
+// formErrors.email
+// formErrors.[fieldName]
+// formErrors.i
+// this.state.formErrors.Email

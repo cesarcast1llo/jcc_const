@@ -24,7 +24,7 @@ class Contact extends Component {
               {/* <Container className="submit">
               <Row>
                 <Col className="intro"> */}
-              <Carousel />
+              {/* <Carousel /> */}
               {/* </Col>
               </Row>
             </Container> */}
