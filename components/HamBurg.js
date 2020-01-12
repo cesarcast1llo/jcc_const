@@ -24,7 +24,7 @@ class HamBurg extends Component {
           className={this.state.visibility ? 'fadeIn' : 'fadeOut'}
         >
           <Link href="/">
-            <a className="bm-li hover-1 fadeout">Home</a>
+            <a className="bm-li">Home</a>
           </Link>
           <Link href="/about">
             <a className="bm-li">About</a>

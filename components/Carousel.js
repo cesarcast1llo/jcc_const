@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Data from '../pages/data.json';
 import { UncontrolledCarousel } from 'reactstrap';
 
@@ -40,6 +39,8 @@ const images = [
   }
 ];
 
-const Carousel = () => <UncontrolledCarousel items={images} />;
+const Carousel = () => (
+  <UncontrolledCarousel interval={false} indicators={false} items={images} />
+);
 
 export default Carousel;

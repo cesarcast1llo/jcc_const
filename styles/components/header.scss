@@ -49,9 +49,8 @@ $animate: all 0.2s ease-in-out;
           .bm-li {
             color: white;
             display: block;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            font-size: 36px;
+            margin-bottom: 3rem;
+            font-size: 3rem;
             text-align: center;
             margin: 0 auto;
             padding: 0;
@@ -62,20 +61,28 @@ $animate: all 0.2s ease-in-out;
             text-decoration: none;
           }
           .bm-li:after {
-            background: none repeat scroll 0 0 transparent;
-            bottom: 0;
-            content: '';
-            display: block;
-            height: 2px;
-            left: 44%;
-            position: absolute;
-            background: #fff;
-            transition: width 0.4s ease 0s, left 0.4s ease 0s;
-            width: 0;
+            display: none;
+            @media (min-width: 767px) {
+              display: block;
+              background: none repeat scroll 0 0 transparent;
+              bottom: 0;
+              content: '';
+              display: block;
+              height: 3px;
+              left: 1%;
+              position: absolute;
+              background: #fff;
+              transition: width 0.3s ease 0s, left 0.3s ease 0s;
+              width: 0;
+            }
           }
           .bm-li:hover:after {
-            width: 12%;
-            left: 44%;
+            display: none;
+            @media (min-width: 767px) {
+              display: block;
+              width: 24%;
+              left: 38%;
+            }
           }
         }
 
@@ -203,7 +210,6 @@ $animate: all 0.2s ease-in-out;
     .fadeOut {
       opacity: 0;
       visibility: hidden;
-      // background-color: rgba(92, 91, 87, 0.9);
       -webkit-transition: opacity 500ms, visibility 500ms;
       transition: opacity 500ms, visibility 500ms;
 

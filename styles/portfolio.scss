@@ -53,35 +53,48 @@
           .modal-content {
             margin: 0 auto;
 
-            .modal-header {
-              border: 0;
-              padding: 0.5rem 1rem;
-              text-align: center;
-
-              button.close:focus,
-              button.close:active {
-                padding: 10px;
-                outline: none !important;
-                box-shadow: none !important;
-                text-shadow: none !important;
-                opacity: 0 !important;
-              }
-            }
-
             .modal-body {
               padding: 0.5rem;
+              padding-bottom: 0;
               @media (min-width: $mobile) {
                 padding: 1rem;
+                padding-bottom: 0;
+              }
+
+              // carousel scss
+              .carousel-inner {
+                .carousel-item {
+                  img {
+                    max-height: 550px;
+                  }
+                  .carousel-caption {
+                    width: 100%;
+                    padding: 10px 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(25, 25, 25, 0.6);
+
+                    h3,
+                    p {
+                      margin-bottom: 0;
+                    }
+                  }
+                }
+              }
+
+              .modal-title {
+                text-align: center;
               }
 
               .gallery-description {
-                padding: 1rem;
+                padding-top: 0.5rem;
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
                 @media (min-width: $mobile) {
-                  padding: 2rem;
-                }
-
-                .modal-title {
-                  text-align: center;
+                  padding-top: 1rem;
+                  padding-right: 1rem;
+                  padding-left: 1rem;
                 }
               }
 
@@ -113,6 +126,10 @@
 
             .modal-footer {
               justify-content: center;
+              padding: 0.5rem;
+              @media (min-width: $mobile) {
+                padding: 1rem;
+              }
 
               .btn,
               .btn:focus,
